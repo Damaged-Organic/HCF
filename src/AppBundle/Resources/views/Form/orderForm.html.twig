@@ -1,0 +1,109 @@
+{# src/AppBundle/Resources/views/Form/orderForm.html.twig #}
+<form action="{{ path('order_send') }}" method="POST" id="order-form" {{ form_enctype(orderForm) }}>
+
+    <div class="field">
+        {{ form_widget(orderForm.customerFullName, {
+            'id': "user-fio",
+            'attr': {
+                'data-rule-required': "true", 'data-msg-required': 'order.customer_full_name.not_blank'|trans({}, "validators"),
+                'data-rule-minlength': "2", 'data-msg-minlength': 'order.customer_full_name.length.min'|trans({}, "validators"),
+                'data-rule-maxlength': "255", 'data-msg-maxlength': 'order.customer_full_name.length.max'|trans({}, "validators")
+            }
+        }) }}
+        {{ form_label(orderForm.customerFullName) }}
+    </div>
+
+    <div class="field-holder connection">
+        <div class="field">
+            {{ form_widget(orderForm.customerEmail, {
+                'id': "user-email",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.customer_email.not_blank'|trans({}, "validators"),
+                    'data-rule-email': "true", 'data-msg-email': 'order.customer_email.valid'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.customerEmail) }}
+        </div>
+        <div class="field">
+            {{ form_widget(orderForm.customerPhone, {
+                'id': "user-phone",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.customer_phone.not_blank'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.customerPhone) }}
+        </div>
+    </div>
+
+    <div class="field-holder company">
+        <div class="field">
+            {{ form_widget(orderForm.companyName, {
+                'id': "user-company",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.company_name.not_blank'|trans({}, "validators"),
+                    'data-rule-maxlength': "511", 'data-msg-maxlength': 'order.company_name.length.max'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.companyName) }}
+        </div>
+        <div class="field">
+            {{ form_widget(orderForm.ticketsAmount, {
+                'id': "user-tickets",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.tickets_amount.not_blank'|trans({}, "validators"),
+                    'data-rule-number': "true", 'data-msg-number': 'order.tickets_amount.range.invalid'|trans({}, "validators"),
+                    'data-rule-range': "[1,99]", 'data-msg-range': 'order.tickets_amount.range.invalid'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.ticketsAmount) }}
+        </div>
+    </div>
+
+    <div class="field-holder address">
+        <div class="field">
+            {{ form_widget(orderForm.companyAddress, {
+                'id': "user-address",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.company_address.not_blank'|trans({}, "validators"),
+                    'data-rule-maxlength': "1023", 'data-msg-maxlength': 'order.company_address.length.max'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.companyAddress) }}
+        </div>
+        <div class="field">
+            {{ form_widget(orderForm.companyIndex, {
+                'id': "user-index",
+                'attr': {
+                    'data-rule-required': "true", 'data-msg-required': 'order.company_index.not_blank'|trans({}, "validators"),
+                    'data-rule-number': "true", 'data-msg-number': 'order.company_index.length.min'|trans({}, "validators"),
+                    'data-rule-range': "[1,99999]", 'data-msg-range': 'order.company_index.length.exact'|trans({}, "validators"),
+                    'data-rule-minlength': "5", 'data-msg-minlength': 'order.company_index.length.exact'|trans({}, "validators"),
+                    'data-rule-maxlength': "5", 'data-msg-maxlength': 'order.company_index.length.exact'|trans({}, "validators")
+                }
+            }) }}
+            {{ form_label(orderForm.companyIndex) }}
+        </div>
+    </div>
+
+    <div class="field">
+        {{ form_widget(orderForm.promoCode, {
+            'id': "user-promo"
+        }) }}
+        {{ form_label(orderForm.promoCode) }}
+    </div>
+
+    {{ form_widget(orderForm._token) }}
+
+    <button type="submit">
+        <span class="submit-button">
+            <span class="text">{{ 'order.submit.label'|trans({}, "forms") }}</span>
+            <span class="loader">
+                <span class="point"></span>
+                <span class="point"></span>
+                <span class="point"></span>
+                <span class="point"></span>
+                <span class="point"></span>
+            </span>
+        </span>
+    </button>
+</form>

@@ -1,0 +1,104 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#content{
+	padding-top: 100px;
+}
+.section{
+	min-width: 1000px;
+	max-width: 1200px;
+	margin: 20px auto 0;
+	overflow: visible;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	steps start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#programm .step-holder{
+	width: 100%;
+	margin-bottom: 40px;
+}
+#programm .step-holder .step{
+	width: 100%;
+	margin-top: 40px;
+	min-height: 140px;
+	position: relative;
+	overflow: hidden;
+}
+#programm .step-holder .step-title{
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -70px;
+	background: #004876;
+}
+#programm .step-holder .step-title h4{
+	padding: 0 10px;
+}
+#programm .step-holder .step-title .icon{
+	display: block;
+	margin: 5px auto 10px;
+}
+#programm .step-holder .step-title .icon:before{ line-height: 40px; }
+#programm .step-holder .step-title:before{
+	display: block;
+	width: 460px;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -.5px;
+	content: "";
+	border-top: 1px dashed #004876;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#programm .step-holder .step-title.full-line:before{ width: 1060px; }
+#programm .step-holder .step-title .inner{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#programm .step-holder .step-title h4{
+	color: #fefefe;
+}
+#programm .step-holder .step-title .time{
+	color: #00abe4;
+	font-size: 0.875em;
+}
+
+#programm .step-holder .step-info{
+	width: 600px;
+	float: right;
+	background: #004876;
+}
+#programm .step-holder .step-info .icon{
+	display: block;
+	width: 80px;
+	height: 80px;
+	font-size: 4em;
+	margin: 0 auto;
+	padding-top: 20px;
+	pointer-events: none;
+}
+#programm .step-holder .step-info .icon:before{ line-height: 80px; }
+#programm .step-holder .step-info p{
+	color: #fefefe;
+	padding: 20px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	programm start										*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -1,0 +1,201 @@
+{# src/AppBundle/Resources/views/State/index.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+    {# Open Graph #}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta property="og:url" content="{{ url('index') }}">
+    <meta property="og:description" content="{{ metadata.description }}">
+    <meta property="og:image" content="{{ asset('bundles/app/images/logo-big.jpg', absolute=true) }}">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:site_name" content="{{ 'default.title'|trans }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('index') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/adaptive/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+
+        {% include 'AppBundle:Common:header.html.twig' only %}
+
+        <main id="content">
+            <section class="section full intro-holder">
+                <div class="inner">
+                    <h1>{{ mainSlide.slogan|upper }}</h1>
+                    <div class="logo"><img src="{{ asset('bundles/app/images/logo.png') }}" alt="Logo"></div>
+                    <h2>{{ 'index.main.subtitle'|trans|upper }}</h2>
+                    <div class="forum-info time">
+                        <span class="icon icon-clock"></span>
+                        <span class="line"></span>
+                        {{ mainSlide.eventWhen|raw }}
+                    </div>
+                    <div class="forum-info place">
+                        <span class="icon icon-pin"></span>
+                        <span class="line"></span>
+                        {{ mainSlide.eventWhere|raw }}
+                    </div>
+                    <div id="countdown" data-event-end="{{ mainSlide.datetime|date('Y/m/d H:i:s') }}"></div>
+                </div>
+                <div class="bottle-triangle"><img src="{{ asset('bundles/app/images/creativin.png') }}" alt="Creativin"></div>
+                <div class="panel">
+                    <figure class="lions-logo">
+                        <a href="http://lions-health.com" target="_blank">
+                            <img src="{{ asset('bundles/app/images/lions-logo.png') }}" alt="Lions Health logo">
+                        </a>
+                    </figure>
+                    <div class="link-button"><a href="{{ path('tickets') }}">{{ 'index.main.action.buy_tickets'|trans }}</a></div>
+                </div>
+            </section>
+            <section class="section filled about">
+                <div class="inner">
+                    <h2>{{ 'index.about.title'|trans }}</h2>
+                    <ul>
+                        {% for forumNumber in forumNumbers %}
+                            <li>
+                                <span class="icon {{ forumNumber.icon }}"></span>
+                                <span class="line"></span>
+                                <p class="number">{{ forumNumber.number }}</p>
+                                <p>{{ forumNumber.title }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    {{ 'index.about.text'|trans|raw }}
+
+                    <div class="video-holder">
+                        <video preload="metadata" controls poster="{{ asset('bundles/app/images/Lions-Health-Sizzle-Reel.jpg') }}">
+                            <source type="video/mp4" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.mp4') }}">
+                            <source type="video/webm" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.webm') }}">
+                            <source type="video/ogv" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.ogv') }}">
+                        </video>
+                    </div>
+                    <h3>{{ 'default.title'|trans }}</h3>
+
+                    {{ 'index.about.more_text'|trans|raw }}
+
+                    <h3>{{ 'index.about.organizators'|trans }}</h3>
+                    <div class="sponsours">
+                        <figure>
+                            <a href="http://lions-health.com" title="Lions Health Ukraine" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/lions-healthcare.jpg') }}" alt="Lions Health Ukraine logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="http://reklamaster.com" title="ReklaMaster" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/reklamaster.png') }}" alt="ReklaMaster logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="http://www.medinform.kiev.ua" title="MedInform" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/medinform.jpg') }}" alt="MedInform logo">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="section program">
+                <div class="inner">
+                    <h2>{{ 'index.programme.title'|trans }}</h2>
+                    <h3>{{ 'index.programme.subtitle'|trans }}</h3>
+                    <section class="steps">
+                        {% for programmeItem in programmeItems %}
+                            <article class="step">
+                                <h3>{{ programmeItem.title }}</h3>
+                                <span class="icon {{ programmeItem.icon }}"></span>
+                                <p>{{ programmeItem.shortDescription }}</p>
+                            </article>
+                        {% endfor %}
+                    </section>
+                    <div class="link-button"><a href="{{ path('programme') }}">{{ 'index.programme.more'|trans }}</a></div>
+                </div>
+            </section>
+            {% if experts %}
+                <section class="section filled speakers">
+                    <div class="inner">
+                        <h2>{{ 'index.experts.title'|trans }}</h2>
+                        <div class="carousel-holder">
+                            <ul class="carousel">
+                                {% for expert in experts %}
+                                    <li class="carousel-item">
+                                        <figure><img src="{{ vich_uploader_asset(expert, 'photoFile')|imagine_filter('expert_photo_thumb') }}" alt="{{ expert.name }}"></figure>
+                                        <p>{{ expert.name }}, {{ expert.position }}</p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="arrow left"><span class="icon icon-arrow-left"></span></div>
+                            <div class="arrow right"><span class="icon icon-arrow-right"></span></div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            {% if expertsThoughts %}
+                <section class="section quotes">
+                    <div class="inner">
+                        <h2>{{ 'index.experts_thoughts.title'|trans }}</h2>
+                        <ul>
+                            {% for expertsThought in expertsThoughts %}
+                                <li>
+                                    <p>{{ expertsThought.thought }}</p>
+                                    <span>{{ expertsThought.name }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+            {% endif %}
+            {% if sponsors %}
+                <section class="section sponsours">
+                    <div class="inner">
+                        <h2>{{ 'index.sponsors.title'|trans }}</h2>
+                        <ul>
+                            {% for sponsor in sponsors %}
+                                <li>
+                                    <figure>
+                                        <a href="{{ sponsor.link }}" title="{{ sponsor.title }}" target="_blank">
+                                            <img src="{{ vich_uploader_asset(sponsor, 'logoFile')|imagine_filter('sponsor_logo_thumb') }}" alt="{{ sponsor.title }}">
+                                        </a>
+                                    </figure>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+            {% endif %}
+            <section class="section contacts">
+                <div class="inner">
+                    <h2>{{ 'index.contacts.headline'|trans }}</h2>
+                    <p>{{ 'index.contacts.description'|trans }}</p>
+                    <div class="link-button">
+                        <a href="{{ path('contacts') }}">{{ 'index.contacts.button'|trans }}</a>
+                    </div>
+                </div>
+            </section>
+
+            {% include 'AppBundle:Common:footer.html.twig' only %}
+
+        </main>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/lib/countdown.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/lib/carousel.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/controllers/headerCtrl.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/app/mainApp.js') }}"></script>
+{% endblock %}

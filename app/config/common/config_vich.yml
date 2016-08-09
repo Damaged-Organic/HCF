@@ -1,0 +1,32 @@
+# app/config/common/config_vich.yml
+twig:
+    form_themes:
+        - 'VichUploaderBundle:Form:fields.html.twig'
+
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        expert_photo:
+            uri_prefix:         /uploads/experts/photos
+            upload_destination: %kernel.root_dir%/../www/uploads/experts/photos
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     true
+            delete_on_remove:   true
+            delete_on_update:   true
+
+        order_archive:
+            uri_prefix:         /uploads/orders/archives
+            upload_destination: %kernel.root_dir%/../www/uploads/orders/archives
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     true
+            delete_on_remove:   true
+            delete_on_update:   true
+
+        sponsor_logo:
+            uri_prefix:         /uploads/sponsors/logos
+            upload_destination: %kernel.root_dir%/../www/uploads/sponsors/logos
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     true
+            delete_on_remove:   true
+            delete_on_update:   true

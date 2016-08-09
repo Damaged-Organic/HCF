@@ -1,0 +1,99 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#page,
+#content{
+	height: 100%;
+	overflow: hidden;
+}
+#content{
+	position: relative;
+}
+#content .inner{
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-45%);
+	-ms-transform: translateX(-50%) translateY(-45%);
+	-o-transform: translateX(-50%) translateY(-45%);
+	transform: translateX(-50%) translateY(-45%);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	404 start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#content h1{
+	margin-top: -80px;
+	font-size: 3em;
+}
+.triangles-holder{
+	width: 600px;
+	height: 300px;
+	position: relative;
+	margin: 40px auto;
+}
+.triangles-holder .triangle{
+	display: block;
+	width: 200px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.triangles-holder .triangle:before{
+	display: block;
+	width: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 150px solid #004876;
+}
+.triangles-holder .triangle:nth-child(2){
+	top: 150px;
+	left: 200px;
+}
+.triangles-holder .triangle:nth-child(2):before{
+	border-bottom: none;
+	border-top: 150px solid #004876;
+}
+.triangles-holder .triangle:nth-child(3){ left: 400px; }
+.triangles-holder .triangle > span{
+	display: block;
+	width: 100%;
+	font-size: 8em;
+	color: #00abe4;
+	text-align: center;
+	margin-top: 150px;
+	line-height: 150px;
+	-webkit-animation: colorfull 20s linear 2s infinite;
+	-o-animation: colorfull 20s linear 2s infinite;
+	animation: colorfull 20s linear 2s infinite;
+}
+.triangles-holder .triangle:nth-child(2) > span{ margin-top: -150px; }
+
+@-webkit-keyframes colorfull{
+	0% { color: #00abe4; }
+	10% { color: #00e4dc; }
+	20% { color: #00e46b; }
+	30% { color: #2be400; }
+	40% { color: #b1e400; }
+	50% { color: #e4bc00; }
+	60% { color: #e45b00; }
+	70% { color: #e40000; }
+	80% { color: #e400b6; }
+	90% { color: #a100e4; }
+	100% { color: #00abe4; }
+}
+
+
+.link-button{ margin: 0 auto; }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	404 end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

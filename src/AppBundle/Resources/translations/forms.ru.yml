@@ -1,0 +1,52 @@
+# src/AppBundle/Resources/translations/forms.ru.yml
+order:
+    customer_full_name:
+        label:       ФИО контактного лица
+        placeholder: Введите фамилию, имя и отчество контактного лица
+
+    customer_email:
+        label:       E-mail контактного лица
+        placeholder: Введите e-mail контактного лица
+
+    customer_phone:
+        label:       Телефон контактного лица
+        placeholder: +380 (99) 999-99-99
+
+    company_name:
+        label:       Юридическое название компании
+        placeholder: Введите юридическое название компании
+
+    company_address:
+        label:       Адрес для отправки документов
+        placeholder: Страна, область, город, улица, дом, номер квартиры или офиса
+
+    company_index:
+        label:       Почтовый индекс
+        placeholder: Укажите почтовый индекс
+
+    tickets_amount:
+        label:       Количество билетов
+        placeholder: Введите количество билетов
+
+    promo_code:
+        label:       Промо-код
+        placeholder: Если вы получили от нас промо-код, введите его в это поле
+
+    submit:
+        label: Заказать
+
+feedback:
+    name:
+        label:       Как я могу к вам обращаться?
+        placeholder:
+
+    email:
+        label:       На какой e-mail мне вам ответить?
+        placeholder:
+
+    message:
+        label:       Есть интересная история?
+        placeholder:
+
+    submit:
+        label: Рассказать

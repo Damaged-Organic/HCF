@@ -1,0 +1,458 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#page, #content{ height: 100%; }
+.section.filled{ background: #004876; }
+.section .inner{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.section .inner h2{ margin-top: 40px; }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	intro start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.intro-holder .inner{
+	width: 75%;
+	max-width: 75%;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	z-index: 9;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.intro-holder .inner h2{
+	margin-top: 0;
+	font-size: 1.125em;
+}
+.intro-holder .inner .logo{
+	width: 280px;
+	margin: 60px auto 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #004876;
+	overflow: hidden;
+}
+
+.intro-holder .inner .forum-info{
+	width: 200px;
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin-left: -300px;
+	text-align: center;
+	overflow: hidden;
+}
+.intro-holder .inner .forum-info.place{ margin-left: 300px; }
+.intro-holder .inner .forum-info .icon{ color: #004876; }
+.intro-holder .inner .forum-info .line{
+	display: block;
+	width: 60%;
+	margin: 0 auto 5px;
+	height: 1px;
+	background: #004876;
+	overflow: hidden;
+}
+
+#countdown{
+	width: 600px;
+	margin: 40px auto 0;
+	text-align: center;
+	overflow: hidden;
+}
+#countdown span{
+	display: inline-block;
+	white-space: -1;
+}
+#countdown .digit-holder{
+	position: relative;
+	margin: 0 20px;
+}
+#countdown .digit-holder:before{
+	display: block;
+	font-size: 3em;
+	position: absolute;
+	top: 2px;
+	right: -26px;
+	font-family: "Open Sans", sans-serif;
+	content: ":";
+}
+#countdown .digit-holder:last-child:before{ display: none; }
+#countdown .digit-holder span.digit{
+	font-size: 3.5em;
+	color: #004876;
+}
+#countdown .digit-holder p{ margin-top: -12px; }
+
+.intro-holder .bottle-triangle{
+	width: 880px;
+	height: 880px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 8;
+}
+.intro-holder .bottle-triangle:before{
+	display: block;
+	width: 0;
+	content: "";
+	border-right: 880px solid transparent;
+	border-bottom: 880px solid #004876;
+	overflow: hidden;
+}
+.intro-holder .bottle-triangle img{
+	width: auto;
+	height: 80%;
+	position: absolute;
+	left: 10%;
+	bottom: 30px;
+	overflow: hidden;
+}
+
+.intro-holder .panel{
+	width: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 60px;
+	background: #004876;
+}
+.intro-holder .panel figure{
+	display: block;
+	width: 120px;
+	position: absolute;
+	top: -60px;
+	right: 10px;
+	overflow: hidden;
+}
+.intro-holder .panel figure a{
+	outline: none;
+}
+.intro-holder .panel .link-button{
+	float: right;
+	margin: 10px 10px 10px 0;
+}
+.intro-holder .panel .link-button.sponsour a{
+	background: #fefefe;
+	color: #004876;
+}
+.intro-holder .panel .link-button a{ background: #e6b017; }
+.intro-holder .panel .link-button a:hover{
+	color: #fefefe;
+	background: #00abe4;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	intro end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	about start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.about h2{
+	color: #fefefe;
+}
+.section.about p{
+	color: #fefefe;
+	padding: 10px 5%;
+}
+.section.about ul{
+	margin: 20px auto;
+	text-align: center;
+}
+.section.about ul li{
+	display: inline-block;
+	white-space: -1;
+	width: 300px;
+}
+.section.about ul li .icon{
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	margin: 0 auto;
+	font-size: 3em;
+	pointer-events: none;
+}
+.section.about ul li .icon:before{
+	line-height: 60px;
+}
+.section.about ul li .line{
+	display: block;
+	width: 50%;
+	height: 1px;
+	margin: 5px auto;
+	background: #fefefe;
+	overflow: hidden;
+}
+.section.about ul li p{
+	padding: 0;
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+.section.about ul li p.number{
+	font-size: 1.25em;
+	color: #00abe4;
+}
+.section.about .video-holder{
+	width: 40%;
+	height: auto;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.section.about .video-holder > video{
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.section.about h3{
+	color: #fefefe;
+	margin-top: 20px;
+}
+.section.about .sponsours{
+	margin: 0 auto 40px;
+	overflow: hidden;
+	text-align: center;
+}
+.section.about .sponsours figure{
+	display: inline-block;
+	vertical-align: top;
+	height: 50px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.section.about .sponsours figure img{
+	width: auto;
+	height: 100%;
+}
+.section.about .sponsours figure:nth-child(2){
+	margin: 20px 20px 0;
+}
+.section.about .link-button{
+	margin: 40px auto 40px;
+}
+.section.about .link-button a{
+	background: #fefefe;
+	color: #004876;
+}
+.section.about p > a{
+	color: #fefefe;
+	text-decoration: underline;
+	font-size: 1em;
+}
+.section.about .link-button a:hover{
+	background: #00abe4;
+	color: #fefefe;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	about end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	program start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.program .steps{
+	width: 100%;
+	margin: 40px 0;
+	overflow: hidden;
+}
+.section.program .inner > h3{
+	font-size: 0.875em;
+}
+.section.program .steps .step{
+	width: 24%;
+	height: 420px;
+	float: left;
+	position: relative;
+	margin-right: 1%;
+	background: #004876;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.section.program .steps .step:last-child{ margin-right: 0; }
+.section.program .steps .step:before,
+.section.program .steps .step:after{
+	display: block;
+	width: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	content: "";
+	margin-top: -10px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #fefefe;
+	overflow: hidden;
+}
+.section.program .steps .step:after{
+	left: 100%;
+	z-index: 2;
+	border-left: 20px solid #004876;
+}
+.section.program .steps .step:first-child:before,
+.section.program .steps .step:last-child:after{
+	display: none;
+}
+.section.program .steps .step h3{
+	font-size: 1.125em;
+	margin-top: 20px;
+	color: #fefefe;
+}
+.section.program .steps .step .icon{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 10px auto;
+	font-size: 5em;
+	color: #fefefe;
+	line-height: 100px;
+}
+.section.program .steps .step .icon:before{
+	line-height: 100px;
+}
+.section.program .steps .step p{
+	color: #fefefe;
+	padding: 0 20px;
+	text-align: center;
+}
+.section.program .link-button{
+	margin: 20px auto 40px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	program end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	speakers start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.speakers{ background: #004876; }
+.section.speakers h2{ color: #fefefe; }
+
+.section.speakers .carousel-holder{
+	margin: 40px auto 20px;
+}
+.section.speakers .carousel-item figure{
+	display: block;
+	width: 100%;
+	max-width: 160px;
+	margin: 0 auto;
+}
+.section.speakers .carousel-item p{
+	color: #fefefe;
+	padding: 10px 40px;
+	text-align: center;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	speakers end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	quotes start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.quotes ul{
+	text-align: center;
+	margin: 40px auto;
+}
+.section.quotes ul li{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	position: relative;
+}
+.section.quotes ul li:nth-child(2){
+	margin: 0 4%;
+}
+.section.quotes ul li p{
+	padding: 0 10px 10px;
+	text-align: center;
+}
+.section.quotes ul li span{
+	font-size: 0.875em;
+	color: #00abe4;
+	padding: 0 20px;
+	text-align: center;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	quotes end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	sponsours start										*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.sponsours ul{
+	text-align: center;
+	margin: 40px auto;
+}
+.section.sponsours ul li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px;
+}
+.section.sponsours ul li figure{
+	display: block;
+	height: 50px;
+	overflow: hidden;
+}
+.section.sponsours ul li figure img{
+	width: auto;
+	height: 100%;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	sponsours end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	contacts start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section.contacts{
+	position: relative;
+	background: #00abe4;
+	text-align: center;
+}
+.section.contacts h2,
+.section.contacts p{
+	color: #fefefe;
+	padding-right: 400px;
+}
+.section.contacts h2{
+	font-size: 1.125em;
+}
+.section.contacts p{
+	max-width: 700px;
+	margin: 10px auto 40px;
+	text-align: center;
+}
+.section.contacts .link-button{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -90px;
+	-webkit-transform: translateX(320px);
+	-ms-transform: translateX(320px);
+	-o-transform: translateX(320px);
+	transform: translateX(320px);
+}
+.section.contacts .link-button a{
+	color: #004876;
+	background: #fefefe;
+}
+.section.contacts .link-button a:hover{
+	color: #fefefe;
+	background: #004876;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	contacts end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

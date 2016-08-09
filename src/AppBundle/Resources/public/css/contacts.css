@@ -1,0 +1,141 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#page,
+#content,
+#contacts{
+	height: 100%;
+	overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	contacts start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#contacts .info{
+	width: 50%;
+	height: 100%;
+	background: #fefefe;
+	text-align: center;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+#contacts .info .inner{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	overflow: hidden;
+}
+#contacts .info h4{
+	font-size: 1em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#contacts .info a{
+	display: block;
+	color: #00abe4;
+}
+#contacts .info a:hover{
+	text-decoration: underline;
+}
+#contacts .info ul{
+	display: block;
+	margin-top: 20px;
+	overflow: hidden;
+}
+#contacts .info ul li{
+	display: block;
+	width: 48%;
+	float: left;
+	margin: 0 1%;
+	margin-top: 10px;
+	background: #004876;
+	overflow: hidden;
+}
+#contacts .info ul li h4,
+#contacts .info ul li p{
+	color: #fefefe;
+}
+#contacts .info ul li h4{
+	padding: 10px 0;
+	margin: 0;
+}
+#contacts .info ul li a{
+	margin-bottom: 10px;
+}
+#contacts .partners{
+	margin-top: 40px;
+	height: 50px;
+	text-align: center;
+	overflow: hidden;
+}
+#contacts .partners figure{
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	height: 100%;
+	margin: 0 10px;
+	overflow: hidden;
+}
+#contacts .partners figure a{
+	display: block;
+	height: 100%;
+	overflow: hidden;
+}
+#contacts .partners figure img{
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	contacts end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	map start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#map-holder{
+	width: 50%;
+	height: 100%;
+	position: relative;
+	padding-top: 60px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	overflow: hidden;
+}
+#map{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	map end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	contacts end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	footer start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	footer end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

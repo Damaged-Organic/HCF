@@ -1,0 +1,288 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start							  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#content{
+	margin-top: 20px;
+	padding-top: 100px;
+}
+.section{
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.grid,
+.row,
+.col{
+	width: 100%;
+	overflow: hidden;
+}
+.grid{
+	margin-bottom: 40px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end								  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	categories start						  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#cases .categories{
+	display: block;
+	width: 100%;
+	margin: 20px 0 0;
+	text-align: left;
+	overflow: hidden;
+}
+#cases .categories li{
+	display: inline-block;
+	vertical-align: top;
+	white-space: -1;
+	margin: 0 5px 10px 0;
+}
+#cases .categories li a{
+	display: block;
+	background: #004876;
+	line-height: 30px;
+	padding: 0 10px 0 25px;
+	border-radius: 3px;
+	color: #fefefe;
+	position: relative;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+#cases .categories li a:before{
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "#";
+	font-size: 1em;
+	color: #00abe4;
+	line-height: 30px;
+	padding: 0 5px 0 10px;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	overflow: hidden;
+}
+#cases .categories li a:hover,
+#cases .categories li.active a{
+	background: #00abe4;
+}
+#cases .categories li a:hover:before,
+#cases .categories li.active a:before{
+	color: #fefefe;
+}
+
+#cases .grid p{
+	padding: 20px 0;
+	font-size: 1em;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	categories end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	cases start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.case-holder{
+	width: 32.222222%;
+	padding-top: 32.222222%;
+	float: left;
+	margin: 10px 0 10px;
+	border: 1px solid #004876;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+.case-holder:nth-child(3n+2){
+	margin: 10px 1.666667% 0;
+}
+.case-holder .inner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.case-holder figure{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.case-holder figure:before{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 72, 118, .5);
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	content: "";
+	overflow: hidden;
+}
+.case-holder:hover figure:before{
+	background: rgba(0, 72, 118, .95);
+}
+.case-holder figure img{
+	display: block;
+	width: auto;
+	height: 100%;
+}
+.case-holder time{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: .875em;
+	color: #fefefe;
+	text-align: right;
+	overflow: hidden;
+}
+.case-holder .info{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.case-holder .info h2{
+	font-size: 1em;
+	text-align: center;
+	color: #fefefe;
+	padding: 0 20px;
+}
+.case-holder .info .link-button{
+	margin: 20px auto 0;
+	overflow: visible;
+}
+.case-holder .info .link-button a{
+	border: 1px solid #fefefe;
+	background: transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.case-holder .info .link-button a:hover{
+	background: #00abe4;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	cases end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	case start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#case{
+	margin-bottom: 40px;
+}
+#case h2{
+	font-size: 1.25em;
+	text-align: left;
+	margin-bottom: 20px;
+}
+#case p{
+	padding-bottom: 20px;
+	text-align: left;
+}
+#case figure{
+	display: block;
+	width: 60%;
+	height: 400px;
+	margin-bottom: 20px;
+	float: left;
+	overflow: hidden;
+}
+#case figure > iframe{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#case .credits{
+	width: 39%;
+	float: left;
+	margin-left: 1%;
+	overflow: hidden;
+}
+#case .credits h3{
+	text-align: left;
+	font-size: 1.125em;
+	padding-left: 5px;
+	color: #e6b017;
+}
+#case .credits ul{
+	display: block;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#case .credits ul li{
+	display: block;
+
+	text-align: left;
+	overflow: hidden;
+}
+#case .credits ul li span{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1em;
+	color: #004876;
+	line-height: 40px;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+#case .credits ul li span.icon{
+	font-size: 1.25em;
+}
+#case .credits ul li span.selected{
+	text-transform: uppercase;
+	color: #00abe4;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	case end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	social start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.social-likes{
+	width: 100%;
+	overflow: hidden;
+}
+.social-likes .social-likes__widget{
+	display: inline-block;
+}
+.social-likes .social-likes__widget .social-likes__button{
+	display: block;
+	background: #004876;
+	color: #fefefe;
+	line-height: 30px;
+	font-size: .875em;
+	cursor: pointer;
+	padding: 0 10px;
+	border-radius: 3px;
+	text-transform: lowercase;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.social-likes .social-likes__widget .social-likes__button:hover{
+	background: #00abe4;
+}
+.social-likes .social-likes__widget .social-likes__button .social-likes__icon{ display: none; }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	social end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -1,0 +1,128 @@
+{# src/AppBundle/Resources/views/Order/invoice.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Healthcare Creative Forum</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/reset.css', absolute=true) }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/icons.css', absolute=true) }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/common.css', absolute=true) }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/invoice.css', absolute=true) }}">
+</head>
+<body>
+<div id="page">
+    <main id="content">
+        <table id="invoice">
+            <table class="requisites">
+                <tr>
+                    <td>Постачальник</td>
+                    <td>Товариство з обмеженою відповідальністю "МЕДІНФОРМ УКРАЇНА"</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>ЄДРПОУ 35644189, тел. 0444619763</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Р/р 26002011524053 в  ПАТ "УКРСОЦБАНК" МФО 300023</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>ІПН 356441826503, номер свідоцтва 200088992</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Адреса 03039 м. Київ, проспект Червонозоряний, буд.119</td>
+                </tr>
+            </table>
+            <table class="recipient">
+                <tr>
+                    <td>Одержувач</td>
+                    <td>{{ order.companyName }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>тел. {{ order.customerPhone }}</td>
+                </tr>
+                <tr>
+                    <td class="kludge_1">Платник</td>
+                    <td>Той самий</td>
+                </tr>
+                <tr>
+                    <td class="kludge_1">Замовлення</td>
+                    <td>Без замовлення</td>
+                </tr>
+            </table>
+            <table class="bill">
+                <tr>
+                    <th colspan="6">Рахунок-фактура № HCF_{{ '%03d'|format(order.orderId) }}</th>
+                </tr>
+                <tr>
+                    <th colspan="6">від {{ order.orderDatetime|date('d') }} {{ (order.orderDatetime|date("F")|lower)|trans({}, "monthNames") }} {{ order.orderDatetime|date("Y") }} р.</th>
+                </tr>
+                <tr class="entitle">
+                    <td>№</td>
+                    <td>Назва</td>
+                    <td>Од.</td>
+                    <td>Кількість</td>
+                    <td>Ціна без ПДВ</td>
+                    <td>Сума без ПДВ</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Участь у форумі "Healthcare Creative Forum 2015"</td>
+                    <td>посл.</td>
+                    <td>{{ order.ticketsAmount }}</td>
+                    <td>{{ invoicePrice.singleTicketPrice|number_format(2, ',', '') }}</td>
+                    <td>{{ invoicePrice.totalTicketPrice|number_format(2, ',', '') }}</td>
+                </tr>
+                {% if invoicePrice.discountTotalPrice %}
+                    <tr>
+                        <td colspan="4"></td>
+                        <td class="no-border">Знижка:</td>
+                        <td>{{ invoicePrice.discountTotalPrice|number_format(2, ',', '') }}</td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td colspan="4"></td>
+                    <td class="no-border">Разом без ПДВ:</td>
+                    <td>{{ invoicePrice.totalPriceWithoutVAT|number_format(2, ',', '') }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td class="no-border">ПДВ:</td>
+                    <td class="bold">{{ invoicePrice.VAT|number_format(2, ',', '') }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td class="no-border">Всього з ПДВ:</td>
+                    <td class="bold">{{ invoicePrice.totalPriceWithVAT|number_format(2, ',', '') }}</td>
+                </tr>
+            </table>
+            <table class="total">
+                <tr>
+                    <td>Всього на суму:</td>
+                    <td class="bold">{{ priceString|capitalize }}</td>
+                </tr>
+                <tr>
+                    <td>ПДВ:</td>
+                    <td>{{ invoicePrice.VAT|number_format(2, ',', '') }} грн.</td>
+                </tr>
+            </table>
+            <table class="sign">
+                <tr>
+                    <td></td>
+                    <td>Виписав(ла):</td>
+                    <td>___________________________________</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" class="bold">Рахунок дійсний до сплати до</td>
+                </tr>
+            </table>
+        </table>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{# src/AppBundle/Resources/views/State/contacts.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('contacts') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/contacts.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+        <section class="section" id="contacts">
+            <div class="info">
+                <div class="inner">
+                    <h4>{{ 'contacts.co_organizers'|trans }}</h4>
+                    <p>{{ 'contacts.company_title'|trans }}</p>
+                    <p>{{ 'contacts.company_address'|trans }}</p>
+                    <a href="http://www.medinform.kiev.ua">www.medinform.kiev.ua</a>
+                    <a href="tel:+380444619763">+38 (044) 461-97-63</a>
+                    <ul>
+                        {% for staffContact in staffContacts %}
+                            <li>
+                                <h4>{{ staffContact.position }}</h4>
+                                <p>{{ staffContact.name }}</p>
+                                <a href="mailto:{{ staffContact.email }}">{{ staffContact.email }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="partners clearfix">
+                        <figure>
+                            <a href="http://lions-health.com" title="Lions Health Ukraine" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/lions-healthcare.jpg') }}" alt="Lions Health Ukraine logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="http://reklamaster.com" title="ReklaMaster" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/reklamaster.png') }}" alt="ReklaMaster logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="http://www.medinform.kiev.ua" title="MedInform" target="_blank">
+                                <img src="{{ asset('bundles/app/images/sponsours/medinform.jpg') }}" alt="MedInform logo">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <aside id="map-holder">
+                <div class="inner" id="map"></div>
+            </aside>
+        </section>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3kXr3bIXERv48Taw8vLUndgWGASoXAKA"></script>
+
+    <script src="{{ asset('bundles/app/js/controllers/mapCtrl.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/app/contactApp.js') }}"></script>
+{% endblock %}

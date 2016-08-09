@@ -1,0 +1,91 @@
+{# src/AppBundle/Resources/views/State/case.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+    {# OpenGraph #}
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta property="og:type" content="video.movie">
+    <meta property="og:url" content="{{ url('case', { 'id': forumCase.id, 'slug': forumCase.slug }) }}">
+    <meta property="og:description" content="{{ metadata.description }}">
+    <meta property="og:site_name" content="{{ 'default.title'|trans }}">
+    {% if forumCase.videoId %}
+        <meta property="og:image" content="https://img.youtube.com/vi/{{ forumCase.videoId }}/sddefault.jpg">
+        <meta property="og:video" content="https://www.youtube.com/v/{{ forumCase.videoId }}">
+        <meta property="og:type" content="video">
+    {% endif %}
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('case', { 'id': forumCase.id, 'slug': forumCase.slug }) }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/cases.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main id="content" class="sticky-footer">
+        <article class="section" id="case">
+            <h2>
+                {{ forumCase.title }}{{ ( forumCase.creditProduct ) ? ', ' ~ forumCase.creditProduct : null }}{{ ( forumCase.creditAgency ) ? ', ' ~ forumCase.creditAgency : null }}
+            </h2>
+            {% if forumCase.description %}
+                <p>{{ forumCase.description }}</p>
+            {% endif %}
+            <figure>
+                <iframe src="https://www.youtube.com/embed/{{ forumCase.videoId }}" frameborder="0" allowfullscreen></iframe>
+            </figure>
+            <div class="credits">
+                <h3>{{ forumCase.title }}</h3>
+                <ul>
+                    {% if forumCase.creditClient %}
+                        <li>
+                            <span class="icon icon-client"></span>
+                            <span>{{ 'case.client'|trans }}: </span>
+                            <span class="selected">{{ forumCase.creditClient }}</span>
+                        </li>
+                    {% endif %}
+                    {% if forumCase.creditAdvertiser %}
+                        <li>
+                            <span class="icon icon-advertisement"></span>
+                            <span>{{ 'case.advertiser'|trans }}: </span>
+                            <span class="selected">{{ forumCase.creditAdvertiser }}</span>
+                        </li>
+                    {% endif %}
+                    {% if forumCase.creditProduct %}
+                        <li>
+                            <span class="icon icon-product"></span>
+                            <span>{{ 'case.product'|trans }}: </span>
+                            <span class="selected">{{ forumCase.creditProduct }}</span>
+                        </li>
+                    {% endif %}
+                    {% if forumCase.creditAgency %}
+                        <li>
+                            <span class="icon icon-agency"></span>
+                            <span>{{ 'case.agency'|trans }}: </span>
+                            <span class="selected">{{ forumCase.creditAgency }}</span>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="social-likes social-likes_light clearfix" data-counters="no">
+                <div class="social facebook">facebook</div>
+                <div class="social twitter">twitter</div>
+                <div class="social vkontakte">vkontakte</div>
+                <div class="social plusone">plusone</div>
+            </div>
+        </article>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-likes/3.0.14/social-likes.min.js"></script>
+{% endblock %}

@@ -1,0 +1,140 @@
+# app/config/common/config.yml
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    # Bundles config
+    - { resource: config_stof.yml }
+    - { resource: config_sonata_admin.yml }
+    - { resource: config_a2lix.yml }
+    - { resource: config_vich.yml }
+    - { resource: config_liip.yml }
+    - { resource: config_formatter.yml }
+    # Services
+    - { resource: @MenuBundle/Menu/config/servicesMenu.yml }
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/common/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            - 'AppBundle:Twig:fields.html.twig'
+    # Twig globals!!!
+    globals:
+        global_developers_agency: "%developers_agency%"
+        global_personal_links:    "%personal_links%"
+
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ AppBundle, TwigBundle ]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        #closure:
+        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
+        #yui_css:
+        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   "%database_driver%"
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        entity_managers:
+            default:
+                auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    port:       "%mailer_port%"
+    encryption: "%mailer_encryption%"
+    auth_mode:  "%mailer_auth_mode%"
+    transport:  "%mailer_transport%"
+    host:       "%mailer_host%"
+    username:   "%mailer_user%"
+    password:   "%mailer_password%"
+    spool:      { type: memory }
+
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+
+    app.page_init_listener:
+        class:     AppBundle\EventListener\PageInitListener
+        scope:     request
+        arguments: [ "@request", "@app.metadata" ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    app.form.type.tel:
+        class: AppBundle\Form\Type\TelType
+        tags:
+            - { name: form.type, alias: tel }
+
+    app.metadata:
+        class: AppBundle\Service\Metadata
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    app.mailer_shortcut:
+        class: AppBundle\Service\MailerShortcut
+        arguments:
+            - "@mailer"
+
+    app.dompdf_shortcut:
+        class: AppBundle\Service\DOMPDFShortcut
+
+    app.image_creator_shortcut:
+        class: AppBundle\Service\ImageCreatorShortcut
+
+    app.invoice_price_counter:
+        class: AppBundle\Service\InvoicePriceCounter
+
+    runcore.price_to_string_formatter:
+        class: AppBundle\Service\PriceToStringFormatter
+
+    app.order_notifier:
+        class: AppBundle\Service\OrderNotifier
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@translator"
+            - "@templating"
+            - "@app.dompdf_shortcut"
+            - "@app.mailer_shortcut"
+            - "@app.image_creator_shortcut"
+            - "@app.invoice_price_counter"
+            - "@runcore.price_to_string_formatter"

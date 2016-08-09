@@ -1,0 +1,281 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1680 start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 1680px){
+	.intro-holder .inner{
+		-webkit-transform: translateY(-55%);
+		-ms-transform: translateY(-55%);
+		-o-transform: translateY(-55%);
+		transform: translateY(-55%);
+	}
+	.intro-holder .inner h2{
+		font-size: 1em;
+	}
+	.intro-holder .inner .logo{ width: 240px; }
+	.intro-holder .inner .forum-info{
+		top: 120px;
+		left: 50%;
+		margin-left: -250px;
+	}
+	.intro-holder .inner .forum-info.place{ margin-left: 250px; }
+	#countdown .digit-holder:before{
+		font-size: 2.25em;
+		top: 5px;
+	}
+	#countdown .digit-holder span.digit{ font-size: 3em; }
+
+	.intro-holder .bottle-triangle{
+		width: 770px;
+		height: 770px;
+	}
+	.intro-holder .bottle-triangle:before{
+		border-right: 770px solid transparent;
+		border-bottom: 770px solid #004876;
+	}
+	.intro-holder .bottle-triangle img{ left: 8%; }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1680 end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1440 start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 1440px){
+	.intro-holder .inner{
+		-webkit-transform: translateY(-60%);
+		-ms-transform: translateY(-60%);
+		-o-transform: translateY(-60%);
+		transform: translateY(-60%);
+	}
+	.intro-holder .inner h2{
+		font-size: 0.875em;
+	}
+	.intro-holder .inner .logo{ width: 220px; }
+	.intro-holder .inner .forum-info{ top: 120px; }
+	#countdown .digit-holder:before{ font-size: 2em; }
+	#countdown .digit-holder span.digit{ font-size: 2.5em; }
+
+	.intro-holder .bottle-triangle{
+		width: 600px;
+		height: 600px;
+	}
+	.intro-holder .bottle-triangle:before{
+		border-right: 600px solid transparent;
+		border-bottom: 600px solid #004876;
+	}
+	.intro-holder .bottle-triangle img{
+		left: 0%;
+		height: 88%;
+	}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1440 end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1024 start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 1024px){
+
+	#page, #content{ height: 100%; }
+
+	.intro-holder .inner{
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	.intro-holder .inner .logo{
+		width: 220px;
+		margin: 20px auto 5px;
+	}
+	.intro-holder .inner .forum-info{
+		top: 100px;
+		margin-left: -220px;
+	}
+	.intro-holder .inner .forum-info.place{ margin-left: 220px; }
+
+	#countdown{
+		width: 480px;
+		margin: 20px auto 0;
+	}
+	#countdown .digit-holder{
+		position: relative;
+		margin: 0 20px;
+	}
+	#countdown .digit-holder:before{
+		font-size: 2em;
+		top: 0px;
+	}
+	#countdown .digit-holder span.digit{ font-size: 2.25em; }
+
+	.intro-holder .bottle-triangle{
+		width: 500px;
+		height: 500px;
+	}
+	.intro-holder .bottle-triangle:before{
+		border-right: 500px solid transparent;
+		border-bottom: 500px solid #004876;
+	}
+	.intro-holder .bottle-triangle img{
+		height: 83%;
+		left: 4%;
+	}
+
+	.section.program h3{
+		font-size: 0.875em;
+	}
+	.section.program .steps .step{
+		height: 460px;
+	}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	1024 end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	800 start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and(max-width: 800px){
+	.intro-holder .inner{
+		width: 75%;
+		max-width: 75%;
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		z-index: 9;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.intro-holder .inner h2{
+		margin-top: 0;
+	}
+	.intro-holder .inner .logo{
+		width: 280px;
+		margin: 40px auto 5px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #004876;
+		overflow: hidden;
+	}
+
+	.intro-holder .inner .forum-info{
+		width: 200px;
+		position: absolute;
+		top: 140px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		margin-left: -300px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.intro-holder .inner .forum-info.place{ margin-left: 300px; }
+	.intro-holder .inner .forum-info .icon{ color: #004876; }
+	.intro-holder .inner .forum-info .line{
+		display: block;
+		width: 60%;
+		margin: 0 auto 5px;
+		height: 1px;
+		background: #004876;
+		overflow: hidden;
+	}
+
+	#countdown{
+		width: 600px;
+		margin: 40px auto 0;
+		text-align: center;
+		overflow: hidden;
+	}
+	#countdown span{
+		display: inline-block;
+		white-space: -1;
+	}
+	#countdown .digit-holder{
+		position: relative;
+		margin: 0 20px;
+	}
+	#countdown .digit-holder:before{
+		display: block;
+		font-size: 3em;
+		position: absolute;
+		top: 2px;
+		right: -26px;
+		font-family: "Open Sans", sans-serif;
+		content: ":";
+	}
+	#countdown .digit-holder:last-child:before{ display: none; }
+	#countdown .digit-holder span.digit{
+		font-size: 3.5em;
+		color: #004876;
+	}
+	#countdown .digit-holder p{ margin-top: -12px; }
+
+	.intro-holder .bottle-triangle{
+		width: 880px;
+		height: 880px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 8;
+	}
+	.intro-holder .bottle-triangle:before{
+		display: block;
+		width: 0;
+		content: "";
+		border-right: 880px solid transparent;
+		border-bottom: 880px solid #004876;
+		overflow: hidden;
+	}
+	.intro-holder .bottle-triangle img{
+		width: auto;
+		height: 80%;
+		position: absolute;
+		left: 10%;
+		bottom: 30px;
+		overflow: hidden;
+	}
+
+	.intro-holder .panel{
+		width: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 60px;
+		background: #004876;
+	}
+	.intro-holder .panel figure{
+		display: block;
+		width: 120px;
+		position: absolute;
+		top: -60px;
+		right: 10px;
+		overflow: hidden;
+	}
+	.intro-holder .panel .link-button{
+		float: right;
+		margin: 10px 10px 10px 0;
+	}
+	.intro-holder .panel .link-button.sponsour a{
+		background: #fefefe;
+		color: #004876;
+	}
+	.intro-holder .panel .link-button a{ background: #e6b017; }
+	.intro-holder .panel .link-button a:hover{
+		color: #fefefe;
+		background: #00abe4;
+	}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	800 end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+
+

@@ -1,0 +1,17 @@
+{# src/AppBundle/Resources/views/Common/header.html.twig #}
+<header id="header" {{ (app.request.attributes.get('_route') != 'index') ? 'class="full"' : null }}>
+    <div class="logo">
+        <a href="{{ path('index') }}"><img src="{{ asset('bundles/app/images/logo.png') }}" alt="Logo"></a>
+    </div>
+    <nav id="menu">
+        {{ knp_menu_render('main', { 'currentClass': 'active' }) }}
+    </nav>
+    <div class="link-button">
+        <a href="{{ path('tickets') }}">{{ 'header.action.tickets'|trans }}</a>
+    </div>
+    <div id="social">
+        <a href="{{ global_personal_links.facebook }}" class="icon icon-facebook" title="Facebook" target="_blank"></a>
+        <!--<a href="{{ global_personal_links.linkedin }}" class="icon icon-linkedin" title="LinkedIn" target="_blank"></a>-->
+    </div>
+    <a href="tel:+380444619763">+38 (044) 461-97-63</a>
+</header>

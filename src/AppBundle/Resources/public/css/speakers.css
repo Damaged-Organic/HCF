@@ -1,0 +1,97 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#content{ padding-top: 100px; }
+.section{
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.grid,
+.row,
+.col{
+	width: 100%;
+	overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	layout end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	speakers start											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#speakers{ margin: 20px auto; }
+#speakers .grid{ margin: 20px 0; }
+#speakers .row{ margin-bottom: 20px; }
+#speakers .col{
+	width: 32.222222%;
+	padding-bottom: 32.222222%;
+	float: left;
+	position: relative;
+	overflow: visible;
+}
+#speakers .col:nth-child(2){ margin: 0 1.666667%; }
+
+#speakers .inner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #004876;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow: hidden;
+}
+#speakers .col .part,
+#speakers .col .part figure{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#speakers .col .part.desc{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 72, 118, 0.95);
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	opacity: 0;
+}
+#speakers .col .part.desc .inner{
+	height: auto;
+	top: 50%;
+	z-index: 10;
+	border: none;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#speakers .col:hover .part.desc{ opacity: 1; }
+
+#speakers .col .part h3,
+#speakers .col .part p{
+	color: #fefefe;
+	padding: 0 5%;
+}
+#speakers .col .part figure img{ height: 100%; }
+
+#speakers .col .part .info{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 72, 118, 0.8);
+	overflow: hidden;
+}
+#speakers .col .part .info h3{
+	padding: 15px 5% 5px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	speakers end											*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

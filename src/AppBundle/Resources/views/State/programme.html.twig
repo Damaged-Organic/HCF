@@ -1,0 +1,63 @@
+{# src/AppBundle/Resources/views/State/programme.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('experts') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/programm.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+        <section class="section" id="programm">
+            <h2>{{ 'programme.title'|trans }}</h2>
+            <div class="step-holder">
+                {% for programmeItem in programmeItems %}
+                    {% if programmeItem.isMain %}
+                        <article class="step">
+                            <div class="step-title">
+                                <div class="inner">
+                                    <h4>{{ programmeItem.title }}</h4>
+                                    <span class="time">{{ programmeItem.timeFrom|date('H:i') }} - {{ programmeItem.timeTo|date('H:i') }}</span>
+                                </div>
+                            </div>
+                            <div class="step-info">
+                                <span class="icon {{ programmeItem.icon }}"></span>
+                                {% if programmeItem.fullDescription %}
+                                    {{ programmeItem.fullDescription|raw }}
+                                {% else %}
+                                    <p>{{ 'programme.no_desc'|trans }}</p>
+                                {% endif %}
+                            </div>
+                        </article>
+                    {% else %}
+                        <div class="step">
+                            <div class="step-title full-line">
+                                <div class="inner">
+                                    <h4>{{ programmeItem.title }}</h4>
+                                    <span class="time">{{ programmeItem.timeFrom|date('H:i') }} - {{ programmeItem.timeTo|date('H:i') }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

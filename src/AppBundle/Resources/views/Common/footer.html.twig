@@ -1,0 +1,17 @@
+{# src/AppBundle/Resources/views/Common/footer.html.twig #}
+<footer id="footer" {{ (app.request.attributes.get('_route') == 'experts' or app.request.attributes.get('_route') == 'cases' or app.request.attributes.get('_route') == 'case') ? 'class="sticky"' : null }}>
+    <div class="cheers-logo">
+        <a href="{{ global_developers_agency.link ~ "/" ~ app.request.locale }}">
+            <img src="{{ asset('bundles/app/images/cheers-logo.png') }}" alt="{{ global_developers_agency.name }} Web Agency">
+        </a>
+    </div>
+    <small>
+        {{ 'footer.credits'
+            |trans({
+                '%developers_agency_name%': global_developers_agency.name,
+                '%link_open%': "<a href=" ~ global_developers_agency.link ~ "/" ~ app.request.locale ~ " target='_blank'>", '%link_close%': "</a>"
+            })
+            |raw
+        }}
+    </small>
+</footer>

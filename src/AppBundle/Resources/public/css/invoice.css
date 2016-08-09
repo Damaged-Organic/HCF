@@ -1,0 +1,64 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	table start												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+table{
+	width: 800px;
+	border: none;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+#invoice{ margin: 40px auto 0; }
+
+table td,
+table th{
+	font-family: dejavu sans;
+	font-size: 1.3em;
+	padding: 5px;
+	color: #000;
+}
+
+table.requisites td:first-child,
+table.recipient td:first-child{
+	width: 150px;
+	text-align: left;
+	padding: 0 20px 0 50px;
+	font-weight: bold;
+}
+
+table.requisites tr:last-child{ height: 60px; }
+
+table.bill{ margin-bottom: 10px; }
+table.bill td{ text-align: right; }
+table.bill td.no-border{
+	border: none;
+	font-weight: bold;
+}
+table.bill tr.entitle{ background: #eee; }
+table.bill tr.entitle td{
+	text-align: center;
+	font-weight: bold;
+}
+table.bill td{ border: 1px solid #000; }
+table.bill td:empty{ border: none; }
+
+table.sign td:empty{
+	width: 450px;
+	/*kludge_2*/
+	padding-left: 450px;
+	/*end-kludge_2*/
+}
+table.sign tr:last-child{
+	text-align: left;
+}
+table.total td:first-child{
+	width: 100px;
+}
+table .bold{ font-weight: bold; }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	table end												*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.kludge_1{
+	padding-left: 50px; font-weight: bold;
+}

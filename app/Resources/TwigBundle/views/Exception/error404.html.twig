@@ -1,0 +1,37 @@
+{# app/Resources/TwigBundle/views/Exception/error404.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ '404.title'|trans }} | {{ 'default.title'|trans }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="robots" content="noindex, follow, noarchive">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/not-found.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <main id="content">
+            <section class="inner">
+                <h1>{{ '404.headline'|trans|upper }}</h1>
+                <div class="triangles-holder">
+					<span class="triangle">
+						<span>4</span>
+					</span>
+					<span class="triangle">
+						<span>0</span>
+					</span>
+					<span class="triangle">
+						<span>4</span>
+					</span>
+                </div>
+                <div class="link-button"><a href="{{ path('index') }}">{{ '404.backlink'|trans }}</a></div>
+            </section>
+        </main>
+    </div>
+{% endblock %}

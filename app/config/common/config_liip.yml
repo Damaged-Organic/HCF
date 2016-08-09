@@ -1,0 +1,30 @@
+# app/config/common/config_liip.yml
+liip_imagine:
+    resolvers:
+       default:
+          web_path:
+              web_root:     %kernel.root_dir%/../www
+              cache_prefix: media/cache
+
+    loaders:
+       default:
+          filesystem:
+             data_root: %kernel.root_dir%/../www/
+
+    filter_sets:
+        cache: ~
+
+        expert_photo:
+            quality: 100
+            filters:
+                thumbnail: { size: [400, 400], mode: outbound }
+
+        expert_photo_thumb:
+            quality: 100
+            filters:
+                thumbnail: { size: [320, 320], mode: outbound }
+
+        sponsor_logo_thumb:
+            quality: 100
+            filters:
+                relative_resize: { heighten: 50 }

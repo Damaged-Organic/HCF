@@ -1,0 +1,53 @@
+{# src/AppBundle/Resources/views/State/tickets.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('tickets') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/order.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="page">
+        <main id="content">
+            <section class="section full order">
+                <div class="inner">
+                    <h2>{{ 'tickets.title'|trans }}</h2>
+                    <p>Стоимость участия в Healthcare Creative Forum до <span>01.09.2015 - 3500 грн.</span> (с учетом НДС), с <span>01.09.2015 по 5.11.2015 – 4000 грн.</span> (с учетом НДС).</p>
+
+                    {% render controller('AppBundle:Form:orderForm') %}
+
+                </div>
+                <div id="response">
+                    <div class="inner">
+                        <p></p>
+                        <div class="link-button"><a href="#">{{ 'tickets.see_invoice'|trans }}</a></div>
+                        <span class="icon icon-close close-message"></span>
+                    </div>
+                </div>
+                <a href="{{ path('index') }}" class="back">{{ 'tickets.get_back'|trans }}</a>
+            </section>
+        </main>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"></script>
+    <script src="{{ asset('bundles/app/js/services/orderService.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/controllers/orderCtrl.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/app/orderApp.js') }}"></script>
+{% endblock %}

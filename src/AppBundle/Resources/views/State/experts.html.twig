@@ -1,0 +1,65 @@
+{# src/AppBundle/Resources/views/State/experts.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('experts') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/speakers.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main id="content" class="sticky-footer">
+        <section class="section" id="speakers">
+            <h2>{{ 'experts.title'|trans }}</h2>
+            <div class="grid">
+                {% for expert in experts %}
+                    {% if loop.first %}
+                        <div class="row">
+                    {% endif %}
+
+                    <article class="col">
+                        <div class="inner">
+                            <div class="part">
+                                <figure><img src="{{ vich_uploader_asset(expert, 'photoFile')|imagine_filter('expert_photo') }}" alt="{{ expert.name }}"></figure>
+                                <div class="info">
+                                    <h3>{{ expert.name }}</h3>
+                                    <p>{{ expert.position }}</p>
+                                </div>
+                            </div>
+                            <div class="part desc">
+                                <div class="inner">
+                                    <p>{{ (expert.description) ?: 'experts.no_desc'|trans }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    {% if loop.last %}
+                        </div>
+                    {% elseif loop.index is divisible by(3) %}
+                        </div>
+                        <div class="row">
+                    {% endif %}
+                {% else %}
+                    <p>{{ 'experts.empty'|trans }}</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

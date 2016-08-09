@@ -1,0 +1,230 @@
+# app/config/common/config_sonata_admin.yml
+doctrine:
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataUserBundle: ~
+                    FOSUserBundle: ~
+                    ApplicationSonataUserBundle: ~
+
+twig:
+    form:
+        resources:
+            - 'SonataCoreBundle:Form:datepicker.html.twig'
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.admin.block.search_result:
+            contexts: [admin]
+        sonata.user.block.menu:
+        sonata.user.block.account:
+        sonata.block.service.text:
+
+parameters:
+    sonata.user.admin.user.class: AppBundle\Admin\UserAdmin
+
+sonata_user:
+    #security_acl: true
+    manager_type: orm
+    class:
+        user:         Application\Sonata\UserBundle\Entity\User
+        group:        Application\Sonata\UserBundle\Entity\Group
+
+fos_user:
+    db_driver:     orm
+    firewall_name: main
+    user_class:    Application\Sonata\UserBundle\Entity\User
+
+    group:
+        group_class:   Application\Sonata\UserBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+sonata_admin:
+    title:      "Dashboard"
+    dashboard:
+        blocks:
+            -
+                position: left
+                type:     sonata.admin.block.admin_list
+            -
+                position: right
+                type:     sonata.block.service.text
+                settings:
+                    content: >
+                        <h2>Система управления содержимым</h2>
+                        <p>На вашем сайте для модерирования доступны следующие разделы:</p>
+                        <h4>> Билеты</h4>
+                        <p>Все, что связано с билетами - цены, промо коды, список заказов.</p>
+                        <h4>> Статический контент</h4>
+                        <p>Секция для управления видимым пользователю содержимым сайта.</p>
+                        <h4>> Расширяемый контент</h4>
+                        <p>Секция для управления видимым пользователю содержимым сайта, с доступными операциями
+                        добавления и удаления элементов.</p>
+                        <h4>> SEO (Поисковая оптимизация)</h4>
+                        <p>В основном это служебная информация для поисковых роботов.</p>
+                        <h4>> Пользователи</h4>
+                        <p>Контроль пользователей системы управления. Внимание - Некорректное редактирование пунктов
+                        данного блока может привести к непредсказуемым последствиям!</p>
+    templates:
+        layout:     ApplicationSonataUserBundle:Admin:standard_layout.html.twig
+        user_block: ApplicationSonataUserBundle:Admin\Core:user_block.html.twig
+
+services:
+    sonata.user.admin.group:
+        abstract: true
+        public:   false
+
+    sonata.admin.ticket:
+        class: AppBundle\Admin\TicketAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Билеты", label: "Билет" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Ticket
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.promo_code:
+        class: AppBundle\Admin\PromoCodeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Билеты", label: "Промо коды" }
+        arguments:
+            - ~
+            - AppBundle\Entity\PromoCode
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.order:
+        class: AppBundle\Admin\OrderAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Билеты", label: "Заказы" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Order
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+            - [ setOrderNotifier, ["@app.order_notifier"] ]
+
+    sonata.admin.main_slide:
+        class: AppBundle\Admin\MainSlideAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Статический контент", label: "Вступительный слайд" }
+        arguments:
+            - ~
+            - AppBundle\Entity\MainSlide
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.forum_number:
+        class: AppBundle\Admin\ForumNumberAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Статический контент", label: "О Форуме в цифрах" }
+        arguments:
+            - ~
+            - AppBundle\Entity\ForumNumber
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.programme_item:
+        class: AppBundle\Admin\ProgrammeItemAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Статический контент", label: "Пункты программы" }
+        arguments:
+            - ~
+            - AppBundle\Entity\ProgrammeItem
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.staff_contact:
+        class: AppBundle\Admin\StaffContactAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Статический контент", label: "Контакты персонала" }
+        arguments:
+            - ~
+            - AppBundle\Entity\StaffContact
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.expert:
+        class: AppBundle\Admin\ExpertAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Расширяемый контент", label: "Эксперты" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Expert
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.expert_thought:
+        class: AppBundle\Admin\ExpertThoughtAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Расширяемый контент", label: "Мысли экспертов" }
+        arguments:
+            - ~
+            - AppBundle\Entity\ExpertThought
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.sponsor:
+        class: AppBundle\Admin\SponsorAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Расширяемый контент", label: "Спонсоры" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Sponsor
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.forum_case:
+        class: AppBundle\Admin\ForumCaseAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Расширяемый контент", label: "Кейсы" }
+        arguments:
+            - ~
+            - AppBundle\Entity\ForumCase
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.forum_case_category:
+        class: AppBundle\Admin\ForumCaseCategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Расширяемый контент", label: "Категории кейсов" }
+        arguments:
+            - ~
+            - AppBundle\Entity\ForumCaseCategory
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]
+
+    sonata.admin.metadata:
+        class: AppBundle\Admin\MetadataAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "SEO", label: "Метаданные" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Metadata
+            - ~
+        calls:
+            - [ setTranslationDomain, [AppBundle] ]

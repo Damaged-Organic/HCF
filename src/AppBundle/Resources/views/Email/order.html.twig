@@ -1,0 +1,5 @@
+{# src/AppBundle/Resources/views/Email/order.html.twig #}
+<p>{{ 'order.body.intro'|trans({'%customerFullName%': order.customerFullName}, 'emails') }}</p>
+{{ 'order.body.main'|trans({}, 'emails')|raw }}
+{{ 'order.body.outro'|trans({}, 'emails')|raw }}
+<p>{{ 'common.body.footer'|trans({'%datetime%': 'now'|date('H:i, d-m-Y')}, 'emails') }}</p>

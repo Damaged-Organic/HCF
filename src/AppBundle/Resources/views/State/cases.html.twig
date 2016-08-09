@@ -1,0 +1,58 @@
+{# src/AppBundle/Resources/views/State/cases.html.twig #}
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ 'default.title'|trans }} | {{ metadata.title }}
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ metadata.description }}" >
+    <meta name="robots" content="{{ metadata.robots }}">
+{% endblock %}
+
+{% block locale %}
+    <link rel="canonical" href="{{ url('cases') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/cases.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main id="content" class="sticky-footer">
+        <section class="section" id="cases">
+            <h2>{{ 'cases.title'|trans }}</h2>
+            <ul class="categories">
+                <li {{ ( not slug ) ? 'class="active"' : null }}>
+                    <a href="{{ path('cases') }}">{{ 'cases.all_cats'|trans }}</a>
+                </li>
+                {% for forumCasesCategory in forumCasesCategories %}
+                    <li {{ ( forumCasesCategory.slug == slug ) ? 'class="active"' : null }}>
+                        <a href="{{ path('cases', {'slug': forumCasesCategory.slug}) }}">{{ forumCasesCategory.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="grid">
+                {% for forumCase in forumCases %}
+                    <article class="col case-holder">
+                        <div class="inner">
+                            <figure><img src="http://img.youtube.com/vi/{{ forumCase.videoId }}/sddefault.jpg" alt="{{ forumCase.title }}"></figure>
+                            <time datetime="{{ forumCase.year }}">{{ forumCase.year }}</time>
+                            <div class="info">
+                                <h2>{{ forumCase.title }}</h2>
+                                <div class="link-button"><a href="{{ path('case', {'id': forumCase.id, 'slug': forumCase.slug}) }}">{{ 'cases.details'|trans }}</a></div>
+                            </div>
+                        </div>
+                    </article>
+                {% else %}
+                    <p>{{ 'cases.empty'|trans }}</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
