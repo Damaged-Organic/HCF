@@ -31,7 +31,14 @@ class ForumNumber implements Translatable
     protected $translations;
 
     /**
-     * @ORM\Column(type="string", length=23, nullable=false)
+     * @ORM\Column(type="string", length=30, nullable=false)
+     *
+     * @Gedmo\Translatable
+     */
+    protected $number;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=false)
      *
      * @Gedmo\Translatable
      */
@@ -41,11 +48,6 @@ class ForumNumber implements Translatable
      * @ORM\Column(type="string", length=31, nullable=false)
      */
     protected $icon;
-
-    /**
-     * @ORM\Column(type="integer", nullable=false)
-     */
-    protected $number;
 
     /**
      * Constructor
@@ -109,7 +111,7 @@ class ForumNumber implements Translatable
     /**
      * Get icon
      *
-     * @return string 
+     * @return string
      */
     public function getIcon()
     {
@@ -132,7 +134,7 @@ class ForumNumber implements Translatable
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -155,7 +157,7 @@ class ForumNumber implements Translatable
     /**
      * Get number
      *
-     * @return integer 
+     * @return integer
      */
     public function getNumber()
     {

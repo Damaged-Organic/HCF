@@ -38,7 +38,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	border: 1px solid #004876;
+	border: 1px solid #00ade5;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -55,7 +55,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgba(0, 72, 118, 0.95);
+	background: rgba(0, 173, 229, .9);
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
@@ -75,7 +75,7 @@
 
 #speakers .col .part h3,
 #speakers .col .part p{
-	color: #fefefe;
+	color: #fff;
 	padding: 0 5%;
 }
 #speakers .col .part figure img{ height: 100%; }
@@ -86,7 +86,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	background: rgba(0, 72, 118, 0.8);
+	background: rgba(0, 173, 229, .8);
 	overflow: hidden;
 }
 #speakers .col .part .info h3{

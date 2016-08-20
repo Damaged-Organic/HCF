@@ -30,7 +30,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 770px solid transparent;
-		border-bottom: 770px solid #004876;
+		border-bottom: 770px solid #00ade5;
 	}
 	.intro-holder .bottle-triangle img{ left: 8%; }
 }
@@ -62,7 +62,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 600px solid transparent;
-		border-bottom: 600px solid #004876;
+		border-bottom: 600px solid #00ade5;
 	}
 	.intro-holder .bottle-triangle img{
 		left: 0%;
@@ -116,7 +116,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 500px solid transparent;
-		border-bottom: 500px solid #004876;
+		border-bottom: 500px solid #00ade5;
 	}
 	.intro-holder .bottle-triangle img{
 		height: 83%;
@@ -158,7 +158,7 @@
 		width: 280px;
 		margin: 40px auto 5px;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #004876;
+		border-bottom: 1px solid #00ade5;
 		overflow: hidden;
 	}
 
@@ -176,13 +176,13 @@
 		overflow: hidden;
 	}
 	.intro-holder .inner .forum-info.place{ margin-left: 300px; }
-	.intro-holder .inner .forum-info .icon{ color: #004876; }
+	.intro-holder .inner .forum-info .icon{ color: #00ade5; }
 	.intro-holder .inner .forum-info .line{
 		display: block;
 		width: 60%;
 		margin: 0 auto 5px;
 		height: 1px;
-		background: #004876;
+		background: #00ade5;
 		overflow: hidden;
 	}
 
@@ -229,7 +229,7 @@
 		width: 0;
 		content: "";
 		border-right: 880px solid transparent;
-		border-bottom: 880px solid #004876;
+		border-bottom: 880px solid #00ade5;
 		overflow: hidden;
 	}
 	.intro-holder .bottle-triangle img{
@@ -247,7 +247,7 @@
 		right: 0;
 		bottom: 0;
 		height: 60px;
-		background: #004876;
+		background: #00ade5;
 	}
 	.intro-holder .panel figure{
 		display: block;
@@ -263,7 +263,7 @@
 	}
 	.intro-holder .panel .link-button.sponsour a{
 		background: #fefefe;
-		color: #004876;
+		color: #00ade5;
 	}
 	.intro-holder .panel .link-button a{ background: #e6b017; }
 	.intro-holder .panel .link-button a:hover{
@@ -274,8 +274,3 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	800 end												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
-
-
-

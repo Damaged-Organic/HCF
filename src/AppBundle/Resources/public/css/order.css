@@ -26,9 +26,12 @@
 	background: #fefefe;
 	position: relative;
 }
-.section.order h2{ font-size: 1.5em; }
+.section.order h2{
+	font-size: 1.5em;
+	color: #005372;
+}
 .section.order p > span{
-	color: #00abe4;
+	color: #005372;
 }
 #order-form{ margin-top: 20px; }
 
@@ -87,7 +90,7 @@
 }
 #response p{
 	padding: 60px 40px 20px 40px;
-	color: #004876;
+	color: #00ade5;
 	text-align: center;
 }
 #response .close-message{
@@ -99,7 +102,7 @@
 	right: 10px;
 	line-height: 30px;
 	font-size: 1.5em;
-	color: #004876;
+	color: #00ade5;
 	text-align: center;
 	cursor: pointer;
 }

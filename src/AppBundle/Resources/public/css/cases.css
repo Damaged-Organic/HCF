@@ -41,11 +41,11 @@
 }
 #cases .categories li a{
 	display: block;
-	background: #004876;
+	background: #00ade5;
 	line-height: 30px;
 	padding: 0 10px 0 25px;
 	border-radius: 3px;
-	color: #fefefe;
+	color: #fff;
 	position: relative;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
@@ -60,7 +60,7 @@
 	left: 0;
 	content: "#";
 	font-size: 1em;
-	color: #00abe4;
+	color: #005372;
 	line-height: 30px;
 	padding: 0 5px 0 10px;
 	-webkit-transition: all .5s ease;
@@ -70,11 +70,11 @@
 }
 #cases .categories li a:hover,
 #cases .categories li.active a{
-	background: #00abe4;
+	background: #005372;
 }
 #cases .categories li a:hover:before,
 #cases .categories li.active a:before{
-	color: #fefefe;
+	color: #fff;
 }
 
 #cases .grid p{
@@ -93,7 +93,7 @@
 	padding-top: 32.222222%;
 	float: left;
 	margin: 10px 0 10px;
-	border: 1px solid #004876;
+	border: 1px solid #00ade5;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -124,7 +124,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgba(0, 72, 118, .5);
+	background: rgba(0, 173, 229, .5);
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
@@ -132,7 +132,7 @@
 	overflow: hidden;
 }
 .case-holder:hover figure:before{
-	background: rgba(0, 72, 118, .95);
+	background: rgba(0, 173, 229, .9);
 }
 .case-holder figure img{
 	display: block;
@@ -144,7 +144,7 @@
 	top: 10px;
 	right: 10px;
 	font-size: .875em;
-	color: #fefefe;
+	color: #fff;
 	text-align: right;
 	overflow: hidden;
 }
@@ -162,7 +162,7 @@
 .case-holder .info h2{
 	font-size: 1em;
 	text-align: center;
-	color: #fefefe;
+	color: #fff;
 	padding: 0 20px;
 }
 .case-holder .info .link-button{
@@ -170,14 +170,14 @@
 	overflow: visible;
 }
 .case-holder .info .link-button a{
-	border: 1px solid #fefefe;
+	border: 1px solid #fff;
 	background: transparent;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .case-holder .info .link-button a:hover{
-	background: #00abe4;
+	background: #005372;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	cases end												*/
@@ -193,6 +193,7 @@
 	font-size: 1.25em;
 	text-align: left;
 	margin-bottom: 20px;
+	color: #005372;
 }
 #case p{
 	padding-bottom: 20px;
@@ -221,7 +222,7 @@
 	text-align: left;
 	font-size: 1.125em;
 	padding-left: 5px;
-	color: #e6b017;
+	color: #005372;
 }
 #case .credits ul{
 	display: block;
@@ -239,17 +240,18 @@
 	display: inline-block;
 	vertical-align: top;
 	font-size: 1em;
-	color: #004876;
+	color: #00ade5;
 	line-height: 40px;
 	text-transform: uppercase;
 	pointer-events: none;
 }
 #case .credits ul li span.icon{
 	font-size: 1.25em;
+	color: #005372;
 }
 #case .credits ul li span.selected{
 	text-transform: uppercase;
-	color: #00abe4;
+	color: #00ade5;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	case end												*/
@@ -267,8 +269,8 @@
 }
 .social-likes .social-likes__widget .social-likes__button{
 	display: block;
-	background: #004876;
-	color: #fefefe;
+	background: #00ade5;
+	color: #fff;
 	line-height: 30px;
 	font-size: .875em;
 	cursor: pointer;
@@ -280,7 +282,7 @@
 	transition: all .5s ease;
 }
 .social-likes .social-likes__widget .social-likes__button:hover{
-	background: #00abe4;
+	background: #005372;
 }
 .social-likes .social-likes__widget .social-likes__button .social-likes__icon{ display: none; }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -2,7 +2,7 @@
 /*	layout start												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #page, #content{ height: 100%; }
-.section.filled{ background: #004876; }
+.section.filled{ background: #00ade5; }
 .section .inner{
 	max-width: 1200px;
 	margin: 0 auto;
@@ -29,13 +29,14 @@
 }
 .intro-holder .inner h2{
 	margin-top: 0;
-	font-size: 1.125em;
+	color: #00ade5;
+	font-size: 0.75em;
 }
 .intro-holder .inner .logo{
-	width: 280px;
-	margin: 60px auto 5px;
+	width: 220px;
+	margin: 20px auto 5px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #004876;
+	border-bottom: 1px solid #005372;
 	overflow: hidden;
 }
 
@@ -53,13 +54,13 @@
 	overflow: hidden;
 }
 .intro-holder .inner .forum-info.place{ margin-left: 300px; }
-.intro-holder .inner .forum-info .icon{ color: #004876; }
+.intro-holder .inner .forum-info .icon{ color: #00ade5; }
 .intro-holder .inner .forum-info .line{
 	display: block;
 	width: 60%;
 	margin: 0 auto 5px;
 	height: 1px;
-	background: #004876;
+	background: #005372;
 	overflow: hidden;
 }
 
@@ -106,7 +107,7 @@
 	width: 0;
 	content: "";
 	border-right: 880px solid transparent;
-	border-bottom: 880px solid #004876;
+	border-bottom: 880px solid #00ade5;
 	overflow: hidden;
 }
 .intro-holder .bottle-triangle img{
@@ -124,7 +125,7 @@
 	right: 0;
 	bottom: 0;
 	height: 60px;
-	background: #004876;
+	background: #00ade5;
 }
 .intro-holder .panel figure{
 	display: block;
@@ -143,12 +144,15 @@
 }
 .intro-holder .panel .link-button.sponsour a{
 	background: #fefefe;
-	color: #004876;
+	color: #00ade5;
 }
-.intro-holder .panel .link-button a{ background: #e6b017; }
+.intro-holder .panel .link-button a{
+	color: #fff;
+	background: #005372;
+}
 .intro-holder .panel .link-button a:hover{
-	color: #fefefe;
-	background: #00abe4;
+	color: #005372;
+	background: #f3ec57;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	intro end												*/
@@ -158,10 +162,10 @@
 /*	about start												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section.about h2{
-	color: #fefefe;
+	color: #fff;
 }
 .section.about p{
-	color: #fefefe;
+	color: #fff;
 	padding: 10px 5%;
 }
 .section.about ul{
@@ -191,7 +195,7 @@
 	width: 50%;
 	height: 1px;
 	margin: 5px auto;
-	background: #fefefe;
+	background: #fff;
 	overflow: hidden;
 }
 .section.about ul li p{
@@ -201,23 +205,52 @@
 }
 .section.about ul li p.number{
 	font-size: 1.25em;
-	color: #00abe4;
+	color: #005372;
 }
-.section.about .video-holder{
-	width: 40%;
+
+.section.about .about-info-holder{
+	width: 100%;
 	height: auto;
-	margin: 20px auto;
+	padding: 0 5%;
+	margin-top: 40px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	overflow: hidden;
 }
-.section.about .video-holder > video{
+.section.about .about-info-holder .text-holder{
+	width: 60%;
+	float: left;
+	overflow: hidden;
+}
+.section.about .about-info-holder .text-holder h3,
+.section.about .about-info-holder .text-holder p{
+	text-align: left;
+	padding: 0;
+}
+.section.about .about-info-holder .text-holder h3{
+	margin: 0 0 15px;
+	font-weight: bold;
+}
+.section.about .about-info-holder .text-holder p{
+	padding: 5px 0 0 0;
+}
+.section.about .about-info-holder .video-holder{
+	width: 40%;
+	height: auto;
+	float: right;
+	overflow: hidden;
+}
+.section.about .about-info-holder .video-holder > video{
 	display: block;
 	width: 100%;
 	max-width: 100%;
 	height: auto;
 	overflow: hidden;
 }
+
 .section.about h3{
-	color: #fefefe;
+	color: #fff;
 	margin-top: 20px;
 }
 .section.about .sponsours{
@@ -243,17 +276,17 @@
 	margin: 40px auto 40px;
 }
 .section.about .link-button a{
-	background: #fefefe;
+	background: #fff;
 	color: #004876;
 }
 .section.about p > a{
-	color: #fefefe;
+	color: #fff;
 	text-decoration: underline;
 	font-size: 1em;
 }
 .section.about .link-button a:hover{
 	background: #00abe4;
-	color: #fefefe;
+	color: #fff;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	about end												*/
@@ -269,6 +302,7 @@
 }
 .section.program .inner > h3{
 	font-size: 0.875em;
+	color: #005372;
 }
 .section.program .steps .step{
 	width: 24%;
@@ -276,7 +310,7 @@
 	float: left;
 	position: relative;
 	margin-right: 1%;
-	background: #004876;
+	background: #00ade5;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -294,13 +328,13 @@
 	margin-top: -10px;
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
-	border-left: 20px solid #fefefe;
+	border-left: 20px solid #fff;
 	overflow: hidden;
 }
 .section.program .steps .step:after{
 	left: 100%;
 	z-index: 2;
-	border-left: 20px solid #004876;
+	border-left: 20px solid #00ade5;
 }
 .section.program .steps .step:first-child:before,
 .section.program .steps .step:last-child:after{
@@ -309,7 +343,7 @@
 .section.program .steps .step h3{
 	font-size: 1.125em;
 	margin-top: 20px;
-	color: #fefefe;
+	color: #fff;
 }
 .section.program .steps .step .icon{
 	display: block;
@@ -317,19 +351,27 @@
 	height: 100px;
 	margin: 10px auto;
 	font-size: 5em;
-	color: #fefefe;
+	color: #fff;
 	line-height: 100px;
 }
 .section.program .steps .step .icon:before{
 	line-height: 100px;
 }
 .section.program .steps .step p{
-	color: #fefefe;
+	color: #fff;
 	padding: 0 20px;
 	text-align: center;
 }
 .section.program .link-button{
 	margin: 20px auto 40px;
+}
+.section.program .link-button a{
+	background: #00ade5;
+	color: #fff;
+}
+.section.program .link-button a:hover{
+	background: #f3ec57;
+	color: #005372;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	program end											*/
@@ -338,8 +380,8 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	speakers start											*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.section.speakers{ background: #004876; }
-.section.speakers h2{ color: #fefefe; }
+.section.speakers{ background: #00ade5; }
+.section.speakers h2{ color: #fff; }
 
 .section.speakers .carousel-holder{
 	margin: 40px auto 20px;
@@ -351,7 +393,7 @@
 	margin: 0 auto;
 }
 .section.speakers .carousel-item p{
-	color: #fefefe;
+	color: #fff;
 	padding: 10px 40px;
 	text-align: center;
 }
@@ -378,6 +420,7 @@
 .section.quotes ul li p{
 	padding: 0 10px 10px;
 	text-align: center;
+	color: #005372;
 }
 .section.quotes ul li span{
 	font-size: 0.875em;
@@ -419,12 +462,12 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section.contacts{
 	position: relative;
-	background: #00abe4;
+	background: #005372;
 	text-align: center;
 }
 .section.contacts h2,
 .section.contacts p{
-	color: #fefefe;
+	color: #fff;
 	padding-right: 400px;
 }
 .section.contacts h2{
@@ -446,12 +489,12 @@
 	transform: translateX(320px);
 }
 .section.contacts .link-button a{
-	color: #004876;
-	background: #fefefe;
+	color: #fff;
+	background: #00ade5;
 }
 .section.contacts .link-button a:hover{
-	color: #fefefe;
-	background: #004876;
+	color: #005372;
+	background: #f3ec57;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	contacts end											*/

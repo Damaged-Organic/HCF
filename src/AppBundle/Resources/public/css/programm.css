@@ -35,7 +35,7 @@
 	top: 50%;
 	left: 0;
 	margin-top: -70px;
-	background: #004876;
+	background: #00ade5;
 }
 #programm .step-holder .step-title h4{
 	padding: 0 10px;
@@ -54,7 +54,7 @@
 	left: 100%;
 	margin-top: -.5px;
 	content: "";
-	border-top: 1px dashed #004876;
+	border-top: 1px dashed #005372;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -73,17 +73,17 @@
 	transform: translateY(-50%);
 }
 #programm .step-holder .step-title h4{
-	color: #fefefe;
+	color: #fff;
 }
 #programm .step-holder .step-title .time{
-	color: #00abe4;
+	color: #005372;
 	font-size: 0.875em;
 }
 
 #programm .step-holder .step-info{
 	width: 600px;
 	float: right;
-	background: #004876;
+	background: #00ade5;
 }
 #programm .step-holder .step-info .icon{
 	display: block;
@@ -96,7 +96,7 @@
 }
 #programm .step-holder .step-info .icon:before{ line-height: 80px; }
 #programm .step-holder .step-info p{
-	color: #fefefe;
+	color: #fff;
 	padding: 20px;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

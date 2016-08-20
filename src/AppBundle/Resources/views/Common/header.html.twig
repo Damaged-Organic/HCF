@@ -1,7 +1,7 @@
 {# src/AppBundle/Resources/views/Common/header.html.twig #}
 <header id="header" {{ (app.request.attributes.get('_route') != 'index') ? 'class="full"' : null }}>
     <div class="logo">
-        <a href="{{ path('index') }}"><img src="{{ asset('bundles/app/images/logo.png') }}" alt="Logo"></a>
+        <a href="{{ path('index') }}"><img src="{{ asset('bundles/app/images/logo-small.png') }}" alt="Logo"></a>
     </div>
     <nav id="menu">
         {{ knp_menu_render('main', { 'currentClass': 'active' }) }}

@@ -17,7 +17,7 @@
 #contacts .info{
 	width: 50%;
 	height: 100%;
-	background: #fefefe;
+	background: #fff;
 	text-align: center;
 	float: left;
 	position: relative;
@@ -42,7 +42,7 @@
 
 #contacts .info a{
 	display: block;
-	color: #00abe4;
+	color: #005372;
 }
 #contacts .info a:hover{
 	text-decoration: underline;
@@ -58,12 +58,12 @@
 	float: left;
 	margin: 0 1%;
 	margin-top: 10px;
-	background: #004876;
+	background: #00ade5;
 	overflow: hidden;
 }
 #contacts .info ul li h4,
 #contacts .info ul li p{
-	color: #fefefe;
+	color: #fff;
 }
 #contacts .info ul li h4{
 	padding: 10px 0;

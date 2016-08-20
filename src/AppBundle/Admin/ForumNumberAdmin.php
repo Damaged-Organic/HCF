@@ -21,11 +21,11 @@ class ForumNumberAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('title', "text", [
+            ->addIdentifier('number', "number", [
                 'label' => "Название пункта"
             ])
-            ->add('number', "number", [
-                'label' => "Цифра"
+            ->add('title', "text", [
+                'label' => "Описание"
             ])
         ;
     }
@@ -33,11 +33,11 @@ class ForumNumberAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('title', "text", [
+            ->add('number', "text", [
                 'label' => "Название пункта"
             ])
-            ->add('number', "number", [
-                'label' => "Цифра"
+            ->add('title', "text", [
+                'label' => "Описание"
             ])
         ;
     }

@@ -18,8 +18,8 @@ app.MapCtrl = (function($, root){
 		setupMarker: setupMarker
 	}
 
-	function initialize(){	
-		this._coords = new google.maps.LatLng(50.425309, 30.533552);
+	function initialize(){
+		this._coords = new google.maps.LatLng(50.4600451, 30.5231005);
 		this.setupMap();
 		this.setupMarker();
 	}

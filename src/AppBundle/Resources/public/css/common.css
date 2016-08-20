@@ -6,7 +6,7 @@ h1{
 	font-weight: normal;
 	text-align: center;
 	font-size: 2.25em;
-	color: #004876;
+	color: #00ade5;
 }
 h2{
 	font-family: "Open Sans", sans-serif;
@@ -14,7 +14,7 @@ h2{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2em;
-	color: #004876;
+	color: #00ade5;
 }
 h3{
 	font-family: "Open Sans", sans-serif;
@@ -22,7 +22,7 @@ h3{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25em;
-	color: #004876;
+	color: #00ade5;
 }
 h4{
 	font-family: "Open Sans", sans-serif;
@@ -30,24 +30,24 @@ h4{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.125em;
-	color: #004876;
+	color: #00ade5;
 }
 p{
 	font-family: "Open Sans", sans-serif;
 	font-size: 0.875em;
-	color: #004876;
+	color: #00ade5;
 	text-align: center;
 }
 a{
 	font-family: "Open Sans", sans-serif;
 	font-size: 0.875em;
 	text-decoration: none;
-	color: #004876;
+	color: #00ade5;
 }
 small, span{
 	display: inline-block;
 	font-family: "Open Sans", sans-serif;
-	color: #004876;
+	color: #00ade5;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	Fonts end												*/
@@ -85,7 +85,7 @@ small, span{
 	width: 100%;
 	height: auto;
 	min-height: 100%;
-	background: #fefefe;
+	background: #fff;
 }
 #content,
 .section,
@@ -93,7 +93,7 @@ small, span{
 	width: 100%;
 }
 .section{
-	background: #fefefe;
+	background: #fff;
 	overflow: hidden;
 }
 .section.full{ height: 100%; }
@@ -107,30 +107,31 @@ small, span{
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #header{
 	width: 100%;
-	height: 60px;
+	height: 80px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background: #fefefe;
+	background: #fff;
 	overflow: hidden;
 }
 #header > a[href^="tel"]{
 	display: inline-block;
 	padding: 20px 0;
+	line-height: 40px;
 	float: right;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 	margin-right: 20px;
 }
-#header > a[href^="tel"]:hover{ color: #00abe4; }
+#header > a[href^="tel"]:hover{ color: #005372; }
 
 #header .logo{
-	width: 85px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	float: left;
-	margin: 10px 0 10px 10px;
+	margin: 10px 0 10px 20px;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
@@ -146,18 +147,21 @@ small, span{
 #header .link-button{
 	width: 100px;
 	float: right;
-	margin: 10px 10px 10px 0;
+	margin: 20px 20px 20px 0;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 	opacity: 0;
 	margin-right: -110px;
 }
-#header .link-button a{ background: #e6b017; }
-#header .link-button a:hover{ background: #00abe4; }
+#header .link-button a{ background: #005372; }
+#header .link-button a:hover{
+	color: #005372;
+	background: #f3ec57;
+}
 
 #header.full .link-button{
-	margin-right: 10px;
+	margin-right: 20px;
 	opacity: 1;
 }
 #header.full .logo{
@@ -184,7 +188,7 @@ small, span{
 	display: inline-block;
 	height: 40px;
 	white-space: -1;
-	margin: 10px;
+	margin: 20px 10px;
 }
 #menu ul li a{
 	display: inline-block;
@@ -215,10 +219,11 @@ small, span{
 }
 #menu ul li a:hover,
 #menu ul li a.active{
-	color: #00abe4;
+	color: #005372;
 }
 #menu ul li a:hover:before,
 #menu ul li a.active:before{
+	background: #005372;
 	-webkit-transform: scaleX(1);
 	-ms-transform: scaleX(1);
 	-o-transform: scaleX(1);
@@ -235,14 +240,14 @@ small, span{
 	width: 40px;
 	height: 40px;
 	float: right;
-	margin: 10px 10px 10px 0;
+	margin: 20px 10px 20px 0;
 }
 #social > .icon{
 	display: block;
 	float: left;
-	color: #004876;
+	color: #00ade5;
 }
-#social > .icon:hover{ color: #00abe4; }
+#social > .icon:hover{ color: #005372; }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	social end												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -281,14 +286,17 @@ img, figure > img{
 	line-height: 40px;
 	text-align: center;
 	text-transform: uppercase;
-	color: #fefefe;
-	background: #004876;
+	color: #fff;
+	background: #00ade5;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 	overflow: hidden;
 }
-.link-button a:hover{ background: #00abe4; }
+.link-button a:hover{
+	color: #005372;
+	background: #f3ec57;
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	buttons end											*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -348,7 +356,7 @@ img, figure > img{
 	width: 100%;
 	height: 100px;
 	position: relative;
-	background: #004876;
+	background: #00ade5;
 	overflow: hidden;
 }
 #footer.sticky{ margin-top: -100px; }
@@ -367,15 +375,15 @@ img, figure > img{
 #footer small{
 	display: block;
 	text-align: center;
-	color: #fefefe;
+	color: #fff;
 }
 #footer small > a{
 	font-size: 1em;
-	color: #fefefe;
+	color: #fff;
 	text-decoration: underline;
 }
 #footer small > a:hover{
-	color: #00abe4;
+	color: #005372;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	footer end												*/
@@ -486,7 +494,7 @@ button[type=submit] span{
 }
 button[type=submit] .submit-button{
 	position: relative;
-	background: #004876;
+	background: #00ade5;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
@@ -503,8 +511,10 @@ button[type=submit] .submit-button > span{
 	text-transform: uppercase;
 }
 button[type=submit] .submit-button > span.loader{ display: none; }
-button[type=submit] .submit-button:hover{ background: #00abe4; }
-
+button[type=submit] .submit-button:hover{ background: #f3ec57; }
+button[type=submit] .submit-button:hover > span{
+	color:#005372;
+}
 #content.active button[type=submit],
 #content.active button[type=submit] .submit-button{ pointer-events: none; }
 #content.active button[type=submit] .submit-button .text{ display: none; }
@@ -594,8 +604,3 @@ button[type=submit] .submit-button:hover{ background: #00abe4; }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	loader end												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
-
-
-

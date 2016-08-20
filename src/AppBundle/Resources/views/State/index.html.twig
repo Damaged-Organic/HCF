@@ -77,16 +77,19 @@
 
                     {{ 'index.about.text'|trans|raw }}
 
-                    <div class="video-holder">
-                        <video preload="metadata" controls poster="{{ asset('bundles/app/images/Lions-Health-Sizzle-Reel.jpg') }}">
-                            <source type="video/mp4" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.mp4') }}">
-                            <source type="video/webm" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.webm') }}">
-                            <source type="video/ogv" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.ogv') }}">
-                        </video>
+                    <div class="about-info-holder">
+                        <div class="video-holder">
+                            <video preload="metadata" controls poster="{{ asset('bundles/app/images/Lions-Health-Sizzle-Reel.jpg') }}">
+                                <source type="video/mp4" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.mp4') }}">
+                                <source type="video/webm" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.webm') }}">
+                                <source type="video/ogv" src="{{ asset('bundles/app/videos/Lions-Health-Sizzle-Reel.ogv') }}">
+                            </video>
+                        </div>
+                        <div class="text-holder">
+                            <h3>{{ 'index.about.more_text_headline'|trans }}</h3>
+                            {{ 'index.about.more_text'|trans|raw }}
+                        </div>
                     </div>
-                    <h3>{{ 'default.title'|trans }}</h3>
-
-                    {{ 'index.about.more_text'|trans|raw }}
 
                     <h3>{{ 'index.about.organizators'|trans }}</h3>
                     <div class="sponsours">
