@@ -48,9 +48,6 @@
 		-o-transform: translateY(-60%);
 		transform: translateY(-60%);
 	}
-	.intro-holder .inner h2{
-		font-size: 0.875em;
-	}
 	.intro-holder .inner .logo{ width: 220px; }
 	.intro-holder .inner .forum-info{ top: 120px; }
 	#countdown .digit-holder:before{ font-size: 2em; }
