@@ -177,7 +177,9 @@
 	box-sizing: border-box;
 }
 .case-holder .info .link-button a:hover{
-	background: #005372;
+	border: 1px solid #f3ec57;
+	color: #005372;
+	background: #f3ec57;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	cases end												*/

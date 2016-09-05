@@ -30,7 +30,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 770px solid transparent;
-		border-bottom: 770px solid #00ade5;
+		border-bottom: 770px solid #005372;
 	}
 	.intro-holder .bottle-triangle img{ left: 8%; }
 }
@@ -49,6 +49,7 @@
 		transform: translateY(-60%);
 	}
 	.intro-holder .inner .logo{ width: 220px; }
+	.intro-holder .inner h2{ font-size: 0.875em; }
 	.intro-holder .inner .forum-info{ top: 120px; }
 	#countdown .digit-holder:before{ font-size: 2em; }
 	#countdown .digit-holder span.digit{ font-size: 2.5em; }
@@ -59,7 +60,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 600px solid transparent;
-		border-bottom: 600px solid #00ade5;
+		border-bottom: 600px solid #005372;
 	}
 	.intro-holder .bottle-triangle img{
 		left: 0%;
@@ -113,7 +114,7 @@
 	}
 	.intro-holder .bottle-triangle:before{
 		border-right: 500px solid transparent;
-		border-bottom: 500px solid #00ade5;
+		border-bottom: 500px solid #005372;
 	}
 	.intro-holder .bottle-triangle img{
 		height: 83%;

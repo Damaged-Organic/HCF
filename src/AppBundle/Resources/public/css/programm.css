@@ -35,8 +35,12 @@
 	top: 50%;
 	left: 0;
 	margin-top: -70px;
+	background: #005372;
+}
+#programm .step-holder .step:nth-child(even) .step-title{
 	background: #00ade5;
 }
+
 #programm .step-holder .step-title h4{
 	padding: 0 10px;
 }
@@ -60,6 +64,9 @@
 	box-sizing: border-box;
 }
 #programm .step-holder .step-title.full-line:before{ width: 1060px; }
+#programm .step-holder .step:nth-child(even) .step-title:before{
+	border-top: 1px dashed #00ade5;
+}
 #programm .step-holder .step-title .inner{
 	width: 100%;
 	height: auto;
@@ -76,13 +83,19 @@
 	color: #fff;
 }
 #programm .step-holder .step-title .time{
-	color: #005372;
+	color: #fff;
 	font-size: 0.875em;
+}
+#programm .step-holder .step:nth-child(even) .step-title .time{
+	color: #005372;
 }
 
 #programm .step-holder .step-info{
 	width: 600px;
 	float: right;
+	background: #005372;
+}
+#programm .step-holder .step:nth-child(even) .step-info{
 	background: #00ade5;
 }
 #programm .step-holder .step-info .icon{
@@ -92,6 +105,7 @@
 	font-size: 4em;
 	margin: 0 auto;
 	padding-top: 20px;
+	color: #f8ea49;
 	pointer-events: none;
 }
 #programm .step-holder .step-info .icon:before{ line-height: 80px; }

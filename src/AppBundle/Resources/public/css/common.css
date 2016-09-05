@@ -6,7 +6,7 @@ h1{
 	font-weight: normal;
 	text-align: center;
 	font-size: 2.25em;
-	color: #00ade5;
+	color: #005372;
 }
 h2{
 	font-family: "Open Sans", sans-serif;
@@ -14,7 +14,7 @@ h2{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2em;
-	color: #00ade5;
+	color: #005372;
 }
 h3{
 	font-family: "Open Sans", sans-serif;
@@ -22,7 +22,7 @@ h3{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25em;
-	color: #00ade5;
+	color: #005372;
 }
 h4{
 	font-family: "Open Sans", sans-serif;
@@ -30,24 +30,24 @@ h4{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.125em;
-	color: #00ade5;
+	color: #005372;
 }
 p{
 	font-family: "Open Sans", sans-serif;
 	font-size: 0.875em;
-	color: #00ade5;
+	color: #005372;
 	text-align: center;
 }
 a{
 	font-family: "Open Sans", sans-serif;
 	font-size: 0.875em;
 	text-decoration: none;
-	color: #00ade5;
+	color: #005372;
 }
 small, span{
 	display: inline-block;
 	font-family: "Open Sans", sans-serif;
-	color: #00ade5;
+	color: #005372;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	Fonts end												*/
@@ -124,6 +124,7 @@ small, span{
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
 	margin-right: 20px;
+	color: #00ade5;
 }
 #header > a[href^="tel"]:hover{ color: #005372; }
 
@@ -154,10 +155,10 @@ small, span{
 	opacity: 0;
 	margin-right: -110px;
 }
-#header .link-button a{ background: #005372; }
+#header .link-button a{ background: #f8ea49; }
 #header .link-button a:hover{
 	color: #005372;
-	background: #f3ec57;
+	background: #f8ea49;
 }
 
 #header.full .link-button{
@@ -214,16 +215,16 @@ small, span{
 	-ms-transform: scaleX(0);
 	-o-transform: scaleX(0);
 	transform: scaleX(0);
-	background: #00abe4;
+	background: #005372;
 	overflow: hidden;
 }
 #menu ul li a:hover,
 #menu ul li a.active{
-	color: #005372;
+	color: #00ade5;
 }
 #menu ul li a:hover:before,
 #menu ul li a.active:before{
-	background: #005372;
+	background: #00ade5;
 	-webkit-transform: scaleX(1);
 	-ms-transform: scaleX(1);
 	-o-transform: scaleX(1);
@@ -279,6 +280,7 @@ img, figure > img{
 	width: 180px;
 	height: 40px;
 	overflow: hidden;
+	cursor: pointer;
 }
 .link-button a{
 	display: block;
@@ -295,7 +297,7 @@ img, figure > img{
 }
 .link-button a:hover{
 	color: #005372;
-	background: #f3ec57;
+	background: #f8ea49;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	buttons end											*/
@@ -341,9 +343,13 @@ img, figure > img{
 	display: block;
 	font-size: 2em;
 	text-align: center;
+	color: #fff;
 }
 .carousel-holder .arrow .icon:before{
 	line-height: 50px;
+}
+.carousel-holder .arrow:hover .icon{
+	color: #f8ea49;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	carousel end											*/
@@ -356,7 +362,7 @@ img, figure > img{
 	width: 100%;
 	height: 100px;
 	position: relative;
-	background: #00ade5;
+	background: #005372;
 	overflow: hidden;
 }
 #footer.sticky{ margin-top: -100px; }
@@ -383,7 +389,7 @@ img, figure > img{
 	text-decoration: underline;
 }
 #footer small > a:hover{
-	color: #005372;
+	color: #f8ea49;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	footer end												*/
@@ -511,7 +517,7 @@ button[type=submit] .submit-button > span{
 	text-transform: uppercase;
 }
 button[type=submit] .submit-button > span.loader{ display: none; }
-button[type=submit] .submit-button:hover{ background: #f3ec57; }
+button[type=submit] .submit-button:hover{ background: #f8ea49; }
 button[type=submit] .submit-button:hover > span{
 	color:#005372;
 }

@@ -2,7 +2,7 @@
 /*	layout start												*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #page, #content{ height: 100%; }
-.section.filled{ background: #00ade5; }
+.section.filled{ background: #005372; }
 .section .inner{
 	max-width: 1200px;
 	margin: 0 auto;
@@ -53,8 +53,11 @@
 	text-align: center;
 	overflow: hidden;
 }
+.intro-holder .inner .forum-info p{
+	color: #00ade5;
+}
 .intro-holder .inner .forum-info.place{ margin-left: 300px; }
-.intro-holder .inner .forum-info .icon{ color: #00ade5; }
+.intro-holder .inner .forum-info .icon{ color: #005372; }
 .intro-holder .inner .forum-info .line{
 	display: block;
 	width: 60%;
@@ -107,7 +110,7 @@
 	width: 0;
 	content: "";
 	border-right: 880px solid transparent;
-	border-bottom: 880px solid #00ade5;
+	border-bottom: 880px solid #005372;
 	overflow: hidden;
 }
 .intro-holder .bottle-triangle img{
@@ -125,7 +128,7 @@
 	right: 0;
 	bottom: 0;
 	height: 60px;
-	background: #00ade5;
+	background: #005372;
 }
 .intro-holder .panel figure{
 	display: block;
@@ -143,16 +146,16 @@
 	margin: 10px 10px 10px 0;
 }
 .intro-holder .panel .link-button.sponsour a{
-	background: #fefefe;
+	background: #f8ea49;
 	color: #00ade5;
 }
 .intro-holder .panel .link-button a{
 	color: #fff;
-	background: #005372;
+	background: #f8ea49;
 }
 .intro-holder .panel .link-button a:hover{
 	color: #005372;
-	background: #f3ec57;
+	background: #f8ea49;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	intro end												*/
@@ -185,6 +188,7 @@
 	line-height: 60px;
 	margin: 0 auto;
 	font-size: 3em;
+	color: #f8ea49;
 	pointer-events: none;
 }
 .section.about ul li .icon:before{
@@ -205,7 +209,7 @@
 .section.about ul li p.number{
 	font-size: 1.25em;
 	font-weight: bold;
-	color: #005372;
+	color: #00ade5;
 }
 
 .section.about .about-info-holder{
@@ -219,8 +223,8 @@
 	overflow: hidden;
 }
 .section.about .about-info-holder .text-holder{
-	width: 60%;
-	float: left;
+	width: 50%;
+	margin: 40px auto 0;
 	overflow: hidden;
 }
 .section.about .about-info-holder .text-holder h3,
@@ -231,14 +235,15 @@
 .section.about .about-info-holder .text-holder h3{
 	margin: 0 0 15px;
 	font-weight: bold;
+	text-align: center;
 }
 .section.about .about-info-holder .text-holder p{
 	padding: 5px 0 0 0;
 }
 .section.about .about-info-holder .video-holder{
-	width: 40%;
+	width: 50%;
 	height: auto;
-	float: right;
+	margin: 0 auto;
 	overflow: hidden;
 }
 .section.about .about-info-holder .video-holder > video{
@@ -315,6 +320,9 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.section.program .steps .step:nth-child(even){
+	background: #005372;
+}
 .section.program .steps .step:last-child{ margin-right: 0; }
 .section.program .steps .step:before,
 .section.program .steps .step:after{
@@ -336,6 +344,9 @@
 	z-index: 2;
 	border-left: 20px solid #00ade5;
 }
+.section.program .steps .step:nth-child(even):after{
+	border-left: 20px solid #005372;
+}
 .section.program .steps .step:first-child:before,
 .section.program .steps .step:last-child:after{
 	display: none;
@@ -351,7 +362,7 @@
 	height: 100px;
 	margin: 10px auto;
 	font-size: 5em;
-	color: #fff;
+	color: #f8ea49;
 	line-height: 100px;
 }
 .section.program .steps .step .icon:before{
@@ -366,11 +377,11 @@
 	margin: 20px auto 40px;
 }
 .section.program .link-button a{
-	background: #00ade5;
+	background: #005372;
 	color: #fff;
 }
 .section.program .link-button a:hover{
-	background: #f3ec57;
+	background: #f8ea49;
 	color: #005372;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -462,7 +473,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section.contacts{
 	position: relative;
-	background: #005372;
+	background: #00ade5;
 	text-align: center;
 }
 .section.contacts h2,
@@ -471,6 +482,8 @@
 	padding-right: 400px;
 }
 .section.contacts h2{
+	margin-top: 0;
+	padding: 40px 400px 40px 0;
 	font-size: 1.125em;
 }
 .section.contacts p{
@@ -489,12 +502,12 @@
 	transform: translateX(320px);
 }
 .section.contacts .link-button a{
-	color: #fff;
-	background: #00ade5;
+	color: #005372;
+	background: #fff;
 }
 .section.contacts .link-button a:hover{
 	color: #005372;
-	background: #f3ec57;
+	background: #f8ea49;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	contacts end											*/

@@ -13,7 +13,7 @@ header:
 
 footer:
     credits: >
-        © Healthcare Creative Forum. Создано в © %link_open%%developers_agency_name%%link_close%, 2015.
+        © Healthcare Creative Forum. Создано в © %link_open%%developers_agency_name%%link_close%, 2016.
         Использование собственных материалов сайта без согласия владельца запрещено.
 
 index:
@@ -58,9 +58,9 @@ index:
         title: Партнеры форума
 
     contacts:
-        headline: Мы открыты для ваших идей и предложений
-        description: >
-            Мы открыты любым идеям и предложениям. Если Вам есть что предложить - свяжитесь с нами!
+        headline: Мы открыты для ваших идей и предложений!
+        # description: >
+        #     Мы открыты любым идеям и предложениям. Если Вам есть что предложить - свяжитесь с нами!
         button: Контакты
 
 programme:

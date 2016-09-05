@@ -10,8 +10,8 @@
 
 		this._options = $.extend(defaults, options);
 		this._defaults = defaults;
-		this._pluginName = pluginName;		
-		
+		this._pluginName = pluginName;
+
 		this.initialize.apply(this, arguments);
 	}
 	Plugin.prototype = {
@@ -50,10 +50,10 @@
 		this.changeItem();
 	}
 	function setStyles(){
-		this.itemWidth = this.el.width() / this._options.itemVisible;
+		this.itemWidth = Math.ceil(this.el.width() / this._options.itemVisible);
 
 		this.items.css({ width: this.itemWidth });
-		this.carousel.css({ width: this.itemWidth * this.itemsCount });
+		this.carousel.css({ width: this.itemWidth * this.itemsCount + 10 });
 	}
 	function checkRange(){
 		if(this.currentItem >= this.itemsCount - this._options.itemVisible){
