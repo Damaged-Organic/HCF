@@ -56,7 +56,7 @@
             </table>
             <table class="bill">
                 <tr>
-                    <th colspan="6">Рахунок-фактура № HCF_{{ '%03d'|format(order.orderId) }}</th>
+                    <th colspan="6">Рахунок-фактура № HCF16_{{ '%03d'|format(order.orderId) }}</th>
                 </tr>
                 <tr>
                     <th colspan="6">від {{ order.orderDatetime|date('d') }} {{ (order.orderDatetime|date("F")|lower)|trans({}, "monthNames") }} {{ order.orderDatetime|date("Y") }} р.</th>
@@ -71,7 +71,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Участь у форумі "Healthcare Creative Forum 2015"</td>
+                    <td>Участь у Форумі "Healthcare Creative Forum 2016"</td>
                     <td>посл.</td>
                     <td>{{ order.ticketsAmount }}</td>
                     <td>{{ invoicePrice.singleTicketPrice|number_format(2, ',', '') }}</td>

@@ -1,19 +1,18 @@
 # src/AppBundle/Resources/translations/emails.ru.yml
 common:
     body:
-        footer: Healthcare Creative Forum 2015, %datetime%.
+        footer: Healthcare Creative Forum 2016, %datetime%.
 
 order:
-    subject: Healthcare Creative Forum. Добро пожаловать!
+    subject: Healthcare Creative Forum 2016. Добро пожаловать!
 
     body:
         intro: Приветствуем, %customerFullName%!
         main: >
-            <p>Рады видеть Вас в числе участников Healthcare Creative Forum!</p>
-            <p>Для того, чтобы посетить мероприятие Вам остался всего один шаг - получить электронный билет. Оплатите счет,
-            который находится во вложении; когда мы зафиксируем оплату - вышлем Вам электронный билет.</p>
-            <p>Мы уверены, что Healthcare Creative Forum 2015 станет для Вас стимулом для креатива и источником творческого
-            вдохновения!</p>
+            <p>Рады видеть Вас в числе участников Healthcare Creative Forum 2016!</p>
+            <p>Пожалуйста, оплатите счет, который находится во вложении. После оплаты Вы получите Ваш электронный билет.</p>
+            <p>Мы уверены, что Healthcare Creative Forum 2016 станет для Вас источником творческого вдохновения!</p>
+            <p>Следите за нашими обновлениями на <a href="https://www.facebook.com/healthcare.creative.forum/?fref=ts" target="_blank">Facebook сообществе!</a></p>
         outro: >
             С наилучшими пожеланиями,
             <br>
@@ -21,14 +20,14 @@ order:
 
 ticket:
     ticket_number: БИЛЕТ №
-    subject:       Healthcare Creative Forum 2015. Билет
+    subject:       Healthcare Creative Forum 2016. Билет
 
     body:
         intro: Приветсвуем Вас, %customerFullName%
         main: >
-            <p>Во вложении Ваш билет на Healthcare Creative Forum. Просто распечатайте его или предъявите на мобильном
+            <p>Во вложении Ваш билет на Healthcare Creative Forum 2016. Просто распечатайте его или предъявите на мобильном
             устройстве в день мероприятия. Если Вы заказали несколько билетов, пожалуйста, передайте их Вашим коллегам.</p>
-            <p>С нетерпением ждем Вас 14 октября 2015 года в 10:00, в кинотеатре “Оскар” ТРЦ Гулливер по адресу: Спортивная площадь, 1а!</p>
+            <p>С нетерпением ждем Вас 9 ноября 2016 года в 10:00, в КВЦ "Парковый", по адресу: ул. Парковая дорога, 16а, Киев!</p>
         outro: >
             С наилучшими пожеланиями,
             <br>

@@ -114,9 +114,15 @@ class StateController extends Controller implements PageInitInterface
                 throw $this->createNotFoundException();
             }
 
-            $forumCases = $_manager->getRepository('AppBundle:ForumCase')->findBy(['forumCaseCategory' => $forumCasesCategory]);
+            $forumCases = $_manager->getRepository('AppBundle:ForumCase')->findBy(
+                ['forumCaseCategory' => $forumCasesCategory],
+                ['id' => 'DESC']
+            );
         } else {
-            $forumCases = $_manager->getRepository('AppBundle:ForumCase')->findAll();
+            $forumCases = $_manager->getRepository('AppBundle:ForumCase')->findBy(
+                [],
+                ['id' => 'DESC']
+            );
         }
 
         return $this->render('AppBundle:State:cases.html.twig', [
