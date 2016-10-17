@@ -31,6 +31,17 @@
 	font-size: 1.5em;
 	color: #005372;
 }
+.section.order p{
+	margin-bottom: 10px;
+}
+.section.order p > a{
+	font-size: 1em;
+	text-decoration: underline;
+}
+.section.order p > a:hover{
+	color: #00abe4;
+	text-decoration: none;
+}
 .section.order p > span{
 	color: #005372;
 }

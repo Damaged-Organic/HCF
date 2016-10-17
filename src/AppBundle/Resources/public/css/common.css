@@ -155,9 +155,12 @@ small, span{
 	opacity: 0;
 	margin-right: -110px;
 }
-#header .link-button a{ background: #f8ea49; }
-#header .link-button a:hover{
+#header .link-button a{
 	color: #005372;
+	background: #f8ea49;
+}
+#header .link-button a:hover{
+	color: #00ade5;
 	background: #f8ea49;
 }
 
